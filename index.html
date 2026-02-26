@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Luke — Homelab</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=5" />
 </head>
 <body>
 
@@ -21,52 +21,140 @@
     </header>
 
 
-    <!-- LAB OVERVIEW -->
-    <div class="section-title">Lab Overview</div>
+<div class="section-title">Lab Overview</div>
 
-    <section class="lab-grid">
+<section class="lab-grid">
 
-      <div class="lab-box">
-        <span class="lab-icon">🖥️</span>
-        <div class="lab-title">Proxmox</div>
+  <!-- Proxmox -->
+  <a class="lab-link" href="https://www.proxmox.com/en/" target="_blank" rel="noopener">
+    <div class="lab-box">
+      <div class="lab-icon" aria-hidden="true">
+        <!-- Server icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="4" width="16" height="6" rx="2"></rect>
+          <rect x="4" y="14" width="16" height="6" rx="2"></rect>
+          <path d="M8 7h.01M8 17h.01"></path>
+          <path d="M12 7h6M12 17h6"></path>
+        </svg>
       </div>
+      <div class="lab-title">Proxmox</div>
+    </div>
+  </a>
 
-      <div class="lab-box">
-        <span class="lab-icon">🏠</span>
-        <div class="lab-title">Home Assistant</div>
+  <!-- Home Assistant -->
+  <a class="lab-link" href="https://www.home-assistant.io/" target="_blank" rel="noopener">
+    <div class="lab-box">
+      <div class="lab-icon" aria-hidden="true">
+        <!-- Home icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 11.5 12 4l9 7.5"></path>
+          <path d="M6.5 10.8V20h11V10.8"></path>
+          <path d="M10 20v-6h4v6"></path>
+        </svg>
       </div>
+      <div class="lab-title">Home Assistant</div>
+    </div>
+  </a>
 
-      <div class="lab-box">
-        <span class="lab-icon">🔐</span>
-        <div class="lab-title">WireGuard</div>
+  <!-- WireGuard -->
+  <a class="lab-link" href="https://www.wireguard.com/" target="_blank" rel="noopener">
+    <div class="lab-box">
+      <div class="lab-icon" aria-hidden="true">
+        <!-- Shield icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3l7 4v6c0 5-3 8-7 9-4-1-7-4-7-9V7l7-4z"></path>
+          <path d="M9.5 12l1.8 1.8L15.5 9.6"></path>
+        </svg>
       </div>
+      <div class="lab-title">WireGuard</div>
+    </div>
+  </a>
 
-      <div class="lab-box">
-        <span class="lab-icon">🛡️</span>
-        <div class="lab-title">AdGuard</div>
+  <!-- AdGuard -->
+  <a class="lab-link" href="https://adguard.com/en/adguard-home/overview.html" target="_blank" rel="noopener">
+    <div class="lab-box">
+      <div class="lab-icon" aria-hidden="true">
+        <!-- Shield + check icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3l7 4v6c0 5-3 8-7 9-4-1-7-4-7-9V7l7-4z"></path>
+          <path d="M9.2 12.2l1.6 1.6 4-4"></path>
+        </svg>
       </div>
+      <div class="lab-title">AdGuard</div>
+    </div>
+  </a>
 
-      <div class="lab-box">
-        <span class="lab-icon">🎬</span>
-        <div class="lab-title">Jellyfin</div>
+  <!-- Jellyfin -->
+  <a class="lab-link" href="https://jellyfin.org/" target="_blank" rel="noopener">
+    <div class="lab-box">
+      <div class="lab-icon" aria-hidden="true">
+        <!-- Play icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 8l6 4-6 4V8z"></path>
+          <rect x="4" y="5" width="16" height="14" rx="3"></rect>
+        </svg>
       </div>
+      <div class="lab-title">Jellyfin</div>
+    </div>
+  </a>
 
-      <div class="lab-box">
-        <span class="lab-icon">🔋</span>
-        <div class="lab-title">NUT (UPS Monitoring)</div>
+  <!-- NUT -->
+  <a class="lab-link" href="https://networkupstools.org/" target="_blank" rel="noopener">
+    <div class="lab-box">
+      <div class="lab-icon" aria-hidden="true">
+        <!-- Battery icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="8" width="16" height="8" rx="2"></rect>
+          <path d="M21 10v4"></path>
+          <path d="M7 12h4"></path>
+        </svg>
       </div>
+      <div class="lab-title">NUT (UPS)</div>
+    </div>
+  </a>
 
-      <div class="lab-box">
-        <span class="lab-icon">🌐</span>
-        <div class="lab-title">Networking</div>
-      </div>
+  <!-- Automations (nuova) -->
+  <div class="lab-box">
+    <div class="lab-icon" aria-hidden="true">
+      <!-- Workflow icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="4" width="6" height="6" rx="2"></rect>
+        <rect x="14" y="14" width="6" height="6" rx="2"></rect>
+        <path d="M10 7h4a3 3 0 0 1 3 3v4"></path>
+        <path d="M7 10v4a3 3 0 0 0 3 3h4"></path>
+      </svg>
+    </div>
+    <div class="lab-title">Automations</div>
+  </div>
 
-      <div class="lab-box">
-        <span class="lab-icon">⚙️</span>
-        <div class="lab-title">Scripting</div>
-      </div>
+  <!-- Networking (generico) -->
+  <div class="lab-box">
+    <div class="lab-icon" aria-hidden="true">
+      <!-- Network icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v6"></path>
+        <path d="M6 21h12"></path>
+        <path d="M8 9h8"></path>
+        <path d="M6 15h12"></path>
+        <path d="M12 9v12"></path>
+      </svg>
+    </div>
+    <div class="lab-title">Networking</div>
+  </div>
 
-    </section>
+  <!-- Scripting (generico) -->
+  <div class="lab-box">
+    <div class="lab-icon" aria-hidden="true">
+      <!-- Code icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18l-6-6 6-6"></path>
+        <path d="M15 6l6 6-6 6"></path>
+      </svg>
+    </div>
+    <div class="lab-title">Scripting</div>
+  </div>
+
+</section>
 
 
     <!-- ENGINEERING PRINCIPLES (INALTERATI) -->
