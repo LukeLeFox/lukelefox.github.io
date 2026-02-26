@@ -218,3 +218,65 @@ kbd{
   font-weight:600;
   letter-spacing:.3px;
 }
+/* ===== PRO BACKGROUND (NOC Night) ===== */
+html, body { min-height: 100%; }
+
+body{
+  background: #050b12; /* fallback */
+}
+
+/* Glow layers */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 500px at 12% 10%, rgba(96,165,250,.16), transparent 60%),
+    radial-gradient(800px 520px at 88% 18%, rgba(34,197,94,.12), transparent 58%),
+    radial-gradient(900px 650px at 50% 110%, rgba(245,158,11,.10), transparent 62%),
+    linear-gradient(180deg, #050b12 0%, #060f1a 40%, #050b12 100%);
+  filter: saturate(1.05) contrast(1.03);
+  animation: bgFloat 18s ease-in-out infinite;
+}
+
+/* Subtle grid pattern */
+body::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  opacity: .18;
+  mask-image: radial-gradient(circle at 50% 35%, rgba(0,0,0,1) 0%, rgba(0,0,0,.9) 40%, rgba(0,0,0,.35) 70%, rgba(0,0,0,0) 100%);
+}
+
+/* Vignette (makes cards pop) */
+.container{
+  position: relative;
+}
+.container::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 35%, transparent 0%, rgba(0,0,0,.45) 75%, rgba(0,0,0,.65) 100%);
+  opacity: .55;
+}
+
+@keyframes bgFloat{
+  0%   { transform: translate3d(0,0,0) scale(1); }
+  50%  { transform: translate3d(10px,-8px,0) scale(1.02); }
+  100% { transform: translate3d(0,0,0) scale(1); }
+}
+
+/* Reduce animation for accessibility */
+@media (prefers-reduced-motion: reduce){
+  body::before{ animation: none; }
+}
