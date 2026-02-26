@@ -28,62 +28,87 @@
     </header>
 
 
-    <!-- HERO -->
-    <section class="hero">
+    <!-- LAB OVERVIEW -->
+    <div class="section-title">Lab Overview</div>
 
-      <div class="card">
-        <h2 class="h-title">Lab Overview</h2>
-        <p class="h-sub">
-          Ambiente personale orientato a automazione, monitoraggio e controllo.
-          Servizi always-on, integrazioni IoT e scripting custom.
-        </p>
+    <section class="lab-grid">
 
-        <div class="pills">
-          <div class="pill"><span class="dot ok"></span>Proxmox</div>
-          <div class="pill"><span class="dot ok"></span>Home Assistant</div>
-          <div class="pill"><span class="dot ok"></span>WireGuard</div>
-          <div class="pill"><span class="dot ok"></span>AdGuard</div>
-          <div class="pill"><span class="dot warn"></span>NAS Standby</div>
-        </div>
+      <div class="lab-box">
+        <span class="lab-icon">🖥️</span>
+        <div class="lab-title">Proxmox</div>
       </div>
 
+      <div class="lab-box">
+        <span class="lab-icon">🏠</span>
+        <div class="lab-title">Home Assistant</div>
+      </div>
 
-      <div class="card">
-        <h2 class="h-title">Engineering Principles</h2>
+      <div class="lab-box">
+        <span class="lab-icon">🔐</span>
+        <div class="lab-title">WireGuard</div>
+      </div>
 
-        <div class="list" style="margin-top:12px">
+      <div class="lab-box">
+        <span class="lab-icon">🛡️</span>
+        <div class="lab-title">AdGuard</div>
+      </div>
 
-          <div class="item">
-            <div class="row">
-              <h4>Minimal dependencies</h4>
-              <div class="tags"><span class="tag">static</span></div>
-            </div>
-            <p>Soluzioni leggere, controllabili e facilmente mantenibili nel tempo.</p>
-          </div>
+      <div class="lab-box">
+        <span class="lab-icon">🎬</span>
+        <div class="lab-title">Jellyfin</div>
+      </div>
 
-          <div class="item">
-            <div class="row">
-              <h4>Local-first design</h4>
-              <div class="tags"><span class="tag">self-hosted</span></div>
-            </div>
-            <p>I servizi core rimangono interni al lab, con accessi remoti controllati.</p>
-          </div>
+      <div class="lab-box">
+        <span class="lab-icon">🔋</span>
+        <div class="lab-title">NUT (UPS Monitoring)</div>
+      </div>
 
-          <div class="item">
-            <div class="row">
-              <h4>Automation over manual ops</h4>
-              <div class="tags"><span class="tag">scripts</span><span class="tag">IoT</span></div>
-            </div>
-            <p>Ridurre interventi manuali ripetitivi tramite script e integrazioni.</p>
-          </div>
+      <div class="lab-box">
+        <span class="lab-icon">🌐</span>
+        <div class="lab-title">Networking</div>
+      </div>
 
-        </div>
+      <div class="lab-box">
+        <span class="lab-icon">⚙️</span>
+        <div class="lab-title">Scripting</div>
       </div>
 
     </section>
 
 
-    <!-- FEATURED -->
+    <!-- ENGINEERING PRINCIPLES (INALTERATI) -->
+    <div class="section-title">Engineering Principles</div>
+
+    <section class="list">
+
+      <div class="item">
+        <div class="row">
+          <h4>Minimal dependencies</h4>
+          <div class="tags"><span class="tag">static</span></div>
+        </div>
+        <p>Soluzioni leggere, controllabili e facilmente mantenibili nel tempo.</p>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <h4>Local-first design</h4>
+          <div class="tags"><span class="tag">self-hosted</span></div>
+        </div>
+        <p>I servizi core rimangono interni al lab, con accessi remoti controllati.</p>
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <h4>Automation over manual ops</h4>
+          <div class="tags"><span class="tag">scripts</span><span class="tag">IoT</span></div>
+        </div>
+        <p>Ridurre interventi manuali ripetitivi tramite script e integrazioni.</p>
+      </div>
+
+    </section>
+
+
+    <!-- FEATURED PROJECTS -->
     <div class="section-title">Featured Projects</div>
 
     <section class="list">
@@ -138,24 +163,6 @@
         </div>
         <p>
           Script Python per notificare IP pubblico via Telegram in ambienti con IP dinamico.
-        </p>
-      </div>
-
-
-      <div class="item">
-        <div class="row">
-          <h4>
-            <a href="https://github.com/LukeLeFox/pydeck_ultimate" target="_blank">
-              pydeck_ultimate
-            </a>
-          </h4>
-          <div class="tags">
-            <span class="tag">DIY</span>
-            <span class="tag">Automation</span>
-          </div>
-        </div>
-        <p>
-          StreamDeck DIY personalizzato per macro e automazioni tecniche.
         </p>
       </div>
 
