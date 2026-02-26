@@ -345,3 +345,14 @@ body::after{
 .lab-link .lab-box{
   cursor: pointer;
 }
+
+/* Avatar GitHub */
+
+.avatar-img{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  object-fit:cover;
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow: 0 4px 14px rgba(0,0,0,.35);
+}
