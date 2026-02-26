@@ -312,3 +312,36 @@ body::after{
   background: rgba(255,255,255,.03);
   border: 1px solid rgba(255,255,255,.08);
 }
+/* Clickable lab cards */
+.lab-link{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+}
+
+.lab-link:focus-visible{
+  outline: 2px solid rgba(96,165,250,.55);
+  outline-offset: 4px;
+  border-radius: var(--radius);
+}
+
+/* SVG icon styling */
+.lab-icon{
+  display:flex;
+  justify-content:center;
+  margin-bottom:10px;
+}
+
+.lab-icon svg{
+  width:26px;
+  height:26px;
+  opacity:.95;
+}
+
+.lab-box{
+  cursor: default;
+}
+
+.lab-link .lab-box{
+  cursor: pointer;
+}
