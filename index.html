@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Luke Tech Diary: personal projects, practical experiments and transparent AI-assisted development." />
   <title>Luke Tech Diary</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=12" />
+  <link rel="stylesheet" href="assets/css/style.css?v=13" />
 </head>
 
 <body>
@@ -17,51 +18,111 @@
         </a>
 
         <div class="brand-text">
+          <div class="eyebrow">~/lukelefox</div>
           <h1>Luke Tech Diary</h1>
-          <p>Vibecoding &amp; Personal Project</p>
+          <p><span class="prompt" aria-hidden="true">$</span> personal projects · practical experiments · vibecoding</p>
         </div>
       </div>
     </header>
 
-    <div class="section-title">Projects</div>
-
-    <section class="list">
-      <div class="item">
-        <h4><a href="https://github.com/LukeLeFox/Pico-Uptime" target="_blank" rel="noopener">Pico Uptime</a></h4>
-        <p><span lang="it">Monitor di rete autonomo per Raspberry Pi Pico W.</span><br>
-          <span lang="en">Standalone network monitor for Raspberry Pi Pico W.</span></p>
+    <section class="disclosure" aria-labelledby="project-note">
+      <div class="disclosure-title" id="project-note">
+        <span class="status-dot" aria-hidden="true"></span>
+        Project note / Nota sui progetti
       </div>
 
-      <div class="item">
-        <h4><a href="https://github.com/LukeLeFox/IPA_Python" target="_blank" rel="noopener">IPA_Python</a></h4>
-        <p><span lang="it">Script Python che invia gli indirizzi IP pubblici e privati tramite Telegram.</span><br>
-          <span lang="en">Python script that sends public and private IP addresses through Telegram.</span></p>
-      </div>
+      <div class="language-grid">
+        <div class="language-block">
+          <span class="language-label">Italiano</span>
+          <p>Questi sono progetti personali, nati per risolvere esigenze concrete nel mio homelab e sui miei dispositivi. Non sono uno sviluppatore professionista: uso esplicitamente strumenti di IA durante la programmazione e pratico vibecoding quando mi serve costruire qualcosa di utile. Pubblico i risultati con trasparenza, curiosità e voglia di imparare.</p>
+        </div>
 
-      <div class="item">
-        <h4><a href="https://github.com/LukeLeFox/NineFin" target="_blank" rel="noopener">NineFIN</a></h4>
-        <p><span lang="it">Client Jellyfin nativo per dispositivi iOS 9.</span><br>
-          <span lang="en">Native Jellyfin client for iOS 9 devices.</span></p>
-      </div>
-
-      <div class="item">
-        <h4><a href="https://github.com/LukeLeFox/NineHA" target="_blank" rel="noopener">NineHA</a></h4>
-        <p><span lang="it">Client Home Assistant nativo per dispositivi iOS 9.</span><br>
-          <span lang="en">Native Home Assistant client for iOS 9 devices.</span></p>
-      </div>
-
-      <div class="item">
-        <h4><a href="https://github.com/LukeLeFox/fortigate-ipsec-psk-ui" target="_blank" rel="noopener">Fortigate-ipsec</a></h4>
-        <p><span lang="it">Interfaccia web minimale per consultare le PSK IPsec tramite API FortiGate.</span><br>
-          <span lang="en">Lightweight web interface for retrieving IPsec PSKs through the FortiGate API.</span></p>
-      </div>
-
-      <div class="item">
-        <h4><a href="https://github.com/LukeLeFox/pixelos-amd64-remix" target="_blank" rel="noopener">Pixelos</a></h4>
-        <p><span lang="it">Strumenti post-installazione per un desktop in stile Raspberry Pi su Debian 13 amd64.</span><br>
-          <span lang="en">Post-install tooling for a Raspberry Pi-style desktop on Debian 13 amd64.</span></p>
+        <div class="language-block">
+          <span class="language-label">English</span>
+          <p>These are personal projects created to solve practical needs in my homelab and on my devices. I am not a professional developer: I explicitly use AI tools while coding and practice vibe coding when I need to build something useful. I share the results with transparency, curiosity and a willingness to learn.</p>
+        </div>
       </div>
     </section>
+
+    <div class="section-title"><span>01</span> Projects / Progetti</div>
+
+    <main class="list">
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">01</span>
+          <h2><a href="https://github.com/LukeLeFox/Pico-Uptime" target="_blank" rel="noopener">Pico Uptime</a></h2>
+          <span class="repo-link">GitHub ↗</span>
+        </div>
+        <div class="project-copy">
+          <p><span class="language-label">Italiano</span> Monitor di rete autonomo per Raspberry Pi Pico W, con dashboard web e notifiche Telegram.</p>
+          <p><span class="language-label">English</span> Standalone network monitor for Raspberry Pi Pico W, with a web dashboard and Telegram notifications.</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">02</span>
+          <h2><a href="https://github.com/LukeLeFox/IPA_Python" target="_blank" rel="noopener">IPA_Python</a></h2>
+          <span class="repo-link">GitHub ↗</span>
+        </div>
+        <div class="project-copy">
+          <p><span class="language-label">Italiano</span> Script Python che rileva gli indirizzi IP pubblici e privati del dispositivo e li invia tramite Telegram.</p>
+          <p><span class="language-label">English</span> Python script that detects a device's public and private IP addresses and sends them through Telegram.</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">03</span>
+          <h2><a href="https://github.com/LukeLeFox/NineFin" target="_blank" rel="noopener">NineFIN</a></h2>
+          <span class="repo-link">GitHub ↗</span>
+        </div>
+        <div class="project-copy">
+          <p><span class="language-label">Italiano</span> Client Jellyfin nativo per dispositivi iOS 9, progettato per riportare lo streaming sui vecchi iPhone e iPad.</p>
+          <p><span class="language-label">English</span> Native Jellyfin client for iOS 9 devices, designed to bring streaming back to older iPhones and iPads.</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">04</span>
+          <h2><a href="https://github.com/LukeLeFox/NineHA" target="_blank" rel="noopener">NineHA</a></h2>
+          <span class="repo-link">GitHub ↗</span>
+        </div>
+        <div class="project-copy">
+          <p><span class="language-label">Italiano</span> Client Home Assistant nativo per iOS 9, con dashboard UIKit responsiva e supporto alle principali card Lovelace.</p>
+          <p><span class="language-label">English</span> Native Home Assistant client for iOS 9, featuring a responsive UIKit dashboard and support for key Lovelace cards.</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">05</span>
+          <h2><a href="https://github.com/LukeLeFox/fortigate-ipsec-psk-ui" target="_blank" rel="noopener">Fortigate-ipsec</a></h2>
+          <span class="repo-link">GitHub ↗</span>
+        </div>
+        <div class="project-copy">
+          <p><span class="language-label">Italiano</span> Interfaccia web minimale per amministratori autorizzati che consultano le PSK IPsec tramite le API FortiGate.</p>
+          <p><span class="language-label">English</span> Lightweight web interface for authorized administrators retrieving IPsec PSKs through the FortiGate API.</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">06</span>
+          <h2><a href="https://github.com/LukeLeFox/pixelos-amd64-remix" target="_blank" rel="noopener">Pixelos</a></h2>
+          <span class="repo-link">GitHub ↗</span>
+        </div>
+        <div class="project-copy">
+          <p><span class="language-label">Italiano</span> Strumenti post-installazione per creare su Debian 13 amd64 un ambiente desktop ispirato a Raspberry Pi Desktop.</p>
+          <p><span class="language-label">English</span> Post-install tooling for building a Raspberry Pi Desktop-inspired environment on Debian 13 amd64.</p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <span class="prompt" aria-hidden="true">$</span> build, test, learn, repeat.
+    </footer>
 
   </div>
 </body>
