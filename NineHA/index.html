@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NineHA — Home Assistant client for legacy iOS 9</title>
+  <meta name="description" content="NineHA is an experimental native Home Assistant client for legacy iOS 9 devices, including iPhone 4S and first-generation iPad mini, with UIKit dashboards and ARMv7 support." />
+  <meta name="keywords" content="NineHA, Home Assistant iOS 9, Home Assistant iPhone 4S, Home Assistant old iPad, legacy iOS, ARMv7, UIKit, Lovelace client" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://lukelefox.github.io/NineHA/" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=16" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NineHA — Home Assistant client for legacy iOS 9" />
+  <meta property="og:description" content="NineHA is an experimental native Home Assistant client for legacy iOS 9 devices, including iPhone 4S and first-generation iPad mini, with UIKit dashboards and ARMv7 support." />
+  <meta property="og:url" content="https://lukelefox.github.io/NineHA/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="NineHA — Home Assistant client for legacy iOS 9" />
+  <meta name="twitter:description" content="NineHA is an experimental native Home Assistant client for legacy iOS 9 devices, including iPhone 4S and first-generation iPad mini, with UIKit dashboards and ARMv7 support." />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <div class="project-mark" aria-hidden="true">HA</div>
+        <div class="brand-text">
+          <div class="eyebrow">~/lukelefox/NineHA</div>
+          <h1>NineHA</h1>
+          <p><span class="prompt" aria-hidden="true">$</span> Home Assistant · iOS 9 · UIKit · ARMv7</p>
+        </div>
+      </div>
+      <nav class="topnav" aria-label="NineHA navigation">
+        <a class="nav-button" href="../"><span aria-hidden="true">./</span>home <small>Tech Diary</small></a>
+      </nav>
+    </header>
+
+    <section class="disclosure project-summary" aria-labelledby="NineHA-status">
+      <div class="disclosure-title" id="NineHA-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        v0.7.7 · experimental
+      </div>
+      <p>NineHA brings a native Home Assistant experience to devices stuck on iOS 9, with a UIKit Lovelace-style dashboard, live updates and support for both iPad and iPhone legacy hardware.</p>
+      <div class="project-badges" aria-label="Project technologies">
+        <span class="project-badge">Home Assistant</span>
+        <span class="project-badge">iOS 9</span>
+        <span class="project-badge">ARMv7</span>
+        <span class="project-badge">UIKit</span>
+        <span class="project-badge">Theos</span>
+        <span class="project-badge">MIT</span>
+      </div>
+      <div class="project-actions">
+        <a class="nav-button" href="https://github.com/LukeLeFox/NineHA/releases/latest" target="_blank" rel="noopener"><span aria-hidden="true">↓</span>download <small>Prebuilt IPA ↗</small></a>
+        <a class="nav-button" href="https://github.com/LukeLeFox/NineHA" target="_blank" rel="noopener"><span aria-hidden="true">./</span>source <small>GitHub ↗</small></a>
+      </div>
+    </section>
+
+    <div class="section-title"><span>01</span> Project overview</div>
+
+    <main class="list">
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">01</span>
+          <h2>Highlights</h2>
+          <span class="repo-link">experimental</span>
+        </div>
+        <ul class="project-list">
+          <li>Manual token authentication and experimental OAuth flow</li>
+          <li>Native UIKit dashboard plus optional original Lovelace WebView</li>
+          <li>Live updates over WebSocket with REST fallback</li>
+          <li>Layouts for masonry, grid, sections and conditional content</li>
+          <li>Native adapters for multiple standard and custom card types</li>
+          <li>Responsive dark interface for legacy iPad and iPhone screens</li>
+        </ul>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">02</span>
+          <h2>Prebuilt ARMv7 IPA</h2>
+          <span class="repo-link">0.7.7</span>
+        </div>
+        <div class="project-copy"><p><span class="language-label">Release</span> A precompiled ARMv7 IPA is published with the project release for compatible legacy devices.</p><p><span class="language-label">Tested</span> Development has been tested on a first-generation iPad mini and iPhone 4S.</p></div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">03</span>
+          <h2>Home Assistant integration</h2>
+          <span class="repo-link">native client</span>
+        </div>
+        <div class="project-copy"><p><span class="language-label">Dashboard</span> Rebuilds key Lovelace concepts with native UIKit components instead of relying entirely on modern browser features.</p><p><span class="language-label">Security</span> Saved app tokens are kept in the iOS Keychain; HTTPS or a VPN is recommended when possible.</p></div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <span class="prompt" aria-hidden="true">$</span> NineHA is an independent experimental project and is not affiliated with Home Assistant or Nabu Casa.
+    </footer>
+  </div>
+</body>
+</html>
