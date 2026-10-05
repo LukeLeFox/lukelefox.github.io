@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FortiGate IPsec PSK UI — authorized admin frontend</title>
+  <meta name="description" content="FortiGate IPsec PSK UI is a lightweight Flask interface for authorized administrators to query FortiGate IPsec Phase 1 configuration through the official REST API." />
+  <meta name="keywords" content="FortiGate API, IPsec PSK UI, Fortinet REST API, Flask FortiGate, IPsec administration, FortiGate admin tool" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://lukelefox.github.io/fortigate-ipsec-psk-ui/" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=16" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="FortiGate IPsec PSK UI — authorized admin frontend" />
+  <meta property="og:description" content="FortiGate IPsec PSK UI is a lightweight Flask interface for authorized administrators to query FortiGate IPsec Phase 1 configuration through the official REST API." />
+  <meta property="og:url" content="https://lukelefox.github.io/fortigate-ipsec-psk-ui/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="FortiGate IPsec PSK UI — authorized admin frontend" />
+  <meta name="twitter:description" content="FortiGate IPsec PSK UI is a lightweight Flask interface for authorized administrators to query FortiGate IPsec Phase 1 configuration through the official REST API." />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <div class="project-mark" aria-hidden="true">FG</div>
+        <div class="brand-text">
+          <div class="eyebrow">~/lukelefox/fortigate-ipsec-psk-ui</div>
+          <h1>FortiGate IPsec PSK UI</h1>
+          <p><span class="prompt" aria-hidden="true">$</span> FortiGate REST API · Flask · authorized administration</p>
+        </div>
+      </div>
+      <nav class="topnav" aria-label="FortiGate IPsec PSK UI navigation">
+        <a class="nav-button" href="../"><span aria-hidden="true">./</span>home <small>Tech Diary</small></a>
+      </nav>
+    </header>
+
+    <section class="disclosure project-summary" aria-labelledby="fortigate-ipsec-psk-ui-status">
+      <div class="disclosure-title" id="fortigate-ipsec-psk-ui-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        active · administrative tool
+      </div>
+      <p>A small stateless frontend for trusted operators interacting with FortiGate IPsec Phase 1 configuration through the firewall's REST API. It is intended only for authorized administrative use.</p>
+      <div class="project-badges" aria-label="Project technologies">
+        <span class="project-badge">FortiGate</span>
+        <span class="project-badge">Python 3.10+</span>
+        <span class="project-badge">Flask</span>
+        <span class="project-badge">REST API</span>
+        <span class="project-badge">MIT</span>
+      </div>
+      <div class="project-actions">
+        <a class="nav-button" href="https://github.com/LukeLeFox/fortigate-ipsec-psk-ui" target="_blank" rel="noopener"><span aria-hidden="true">./</span>source <small>GitHub ↗</small></a>
+      </div>
+    </section>
+
+    <div class="section-title"><span>01</span> Project overview</div>
+
+    <main class="list">
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">01</span>
+          <h2>Highlights</h2>
+          <span class="repo-link">administrative tool</span>
+        </div>
+        <ul class="project-list">
+          <li>Manual FortiGate connection configuration</li>
+          <li>Lists IPsec Phase 1 tunnels</li>
+          <li>Retrieves information through the FortiGate REST API</li>
+          <li>No credential persistence or local configuration database</li>
+          <li>Supports VDOM-aware administrative workflows</li>
+          <li>Designed for temporary, controlled administrative use</li>
+        </ul>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">02</span>
+          <h2>Security scope</h2>
+          <span class="repo-link">trusted operators</span>
+        </div>
+        <p class="project-note"><strong>Do not expose this application publicly.</strong> It handles sensitive administrative information and is intended for localhost or otherwise tightly controlled environments operated by authorized administrators.</p>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">03</span>
+          <h2>Architecture</h2>
+          <span class="repo-link">stateless</span>
+        </div>
+        <div class="project-copy"><p><span class="language-label">Backend</span> Python 3.10+, Flask and requests.</p><p><span class="language-label">Principle</span> No offline decryption or reverse engineering: the UI acts as a frontend to behavior exposed by the FortiGate API and the privileges of the authenticated administrator.</p></div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <span class="prompt" aria-hidden="true">$</span> For authorized administrative use only. Released under the MIT License.
+    </footer>
+  </div>
+</body>
+</html>
