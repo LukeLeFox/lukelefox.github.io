@@ -435,3 +435,99 @@ a:focus-visible{
     transition:none;
   }
 }
+
+
+/* Project detail pages */
+.project-app-icon{
+  display:block;
+  width:72px;
+  height:72px;
+  flex:none;
+  border:1px solid #30363d;
+  border-radius:16px;
+  object-fit:cover;
+  box-shadow:0 0 0 4px rgba(88,166,255,.08);
+}
+
+.project-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
+}
+
+.project-actions .nav-button{
+  width:auto;
+}
+
+.project-summary{
+  margin-top:18px;
+}
+
+.project-summary p{
+  margin:0;
+  color:#b8c2cc;
+  font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size:14px;
+  line-height:1.68;
+}
+
+.project-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:14px;
+}
+
+.project-badge{
+  display:inline-flex;
+  align-items:center;
+  padding:4px 8px;
+  border:1px solid rgba(88,166,255,.28);
+  border-radius:5px;
+  color:var(--blue);
+  background:rgba(88,166,255,.08);
+  font-size:11px;
+  font-weight:700;
+}
+
+.project-list{
+  margin:12px 0 0;
+  padding-left:19px;
+  color:#b8c2cc;
+  font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.project-list li + li{
+  margin-top:4px;
+}
+
+.project-note{
+  margin-top:14px;
+  color:var(--muted);
+  font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size:12px;
+  line-height:1.6;
+}
+
+.project-note strong{
+  color:#c9d1d9;
+}
+
+.project-link{
+  color:var(--blue);
+}
+
+.project-link:hover{
+  text-decoration:underline;
+}
+
+@media (max-width:720px){
+  .project-app-icon{
+    width:58px;
+    height:58px;
+    border-radius:13px;
+  }
+}
