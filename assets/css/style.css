@@ -531,3 +531,31 @@ a:focus-visible{
     border-radius:13px;
   }
 }
+
+
+.project-mark{
+  display:grid;
+  place-items:center;
+  width:72px;
+  height:72px;
+  flex:none;
+  border:1px solid #30363d;
+  border-radius:16px;
+  color:#aff5b4;
+  background:
+    linear-gradient(135deg, rgba(63,185,80,.14), rgba(88,166,255,.08)),
+    #0d1117;
+  box-shadow:0 0 0 4px rgba(88,166,255,.08);
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:-.05em;
+}
+
+@media (max-width:720px){
+  .project-mark{
+    width:58px;
+    height:58px;
+    border-radius:13px;
+    font-size:18px;
+  }
+}
