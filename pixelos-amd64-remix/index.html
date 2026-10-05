@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PixelOS amd64 Remix — Raspberry Pi Desktop-inspired Debian 13 setup</title>
+  <meta name="description" content="PixelOS amd64 Remix provides experimental post-install tooling for building a Raspberry Pi Desktop / PIXEL-inspired environment on a clean Debian 13 Trixie amd64 system." />
+  <meta name="keywords" content="PixelOS amd64 Remix, Debian 13 PIXEL, Raspberry Pi Desktop amd64, Debian Trixie desktop, RPD amd64, LXDE Debian" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://lukelefox.github.io/pixelos-amd64-remix/" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=16" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PixelOS amd64 Remix — Raspberry Pi Desktop-inspired Debian 13 setup" />
+  <meta property="og:description" content="PixelOS amd64 Remix provides experimental post-install tooling for building a Raspberry Pi Desktop / PIXEL-inspired environment on a clean Debian 13 Trixie amd64 system." />
+  <meta property="og:url" content="https://lukelefox.github.io/pixelos-amd64-remix/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="PixelOS amd64 Remix — Raspberry Pi Desktop-inspired Debian 13 setup" />
+  <meta name="twitter:description" content="PixelOS amd64 Remix provides experimental post-install tooling for building a Raspberry Pi Desktop / PIXEL-inspired environment on a clean Debian 13 Trixie amd64 system." />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <div class="project-mark" aria-hidden="true">PX</div>
+        <div class="brand-text">
+          <div class="eyebrow">~/lukelefox/pixelos-amd64-remix</div>
+          <h1>PixelOS amd64 Remix</h1>
+          <p><span class="prompt" aria-hidden="true">$</span> Debian 13 amd64 · Raspberry Pi Desktop-inspired · post-install tooling</p>
+        </div>
+      </div>
+      <nav class="topnav" aria-label="PixelOS amd64 Remix navigation">
+        <a class="nav-button" href="../"><span aria-hidden="true">./</span>home <small>Tech Diary</small></a>
+      </nav>
+    </header>
+
+    <section class="disclosure project-summary" aria-labelledby="pixelos-amd64-remix-status">
+      <div class="disclosure-title" id="pixelos-amd64-remix-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        experimental · usable
+      </div>
+      <p>PixelOS amd64 Remix keeps Debian 13 as the base operating system and layers selected Raspberry Pi Desktop / RPD components on top with conservative APT pinning and documented compatibility workarounds.</p>
+      <div class="project-badges" aria-label="Project technologies">
+        <span class="project-badge">Debian 13</span>
+        <span class="project-badge">amd64</span>
+        <span class="project-badge">RPD/PIXEL</span>
+        <span class="project-badge">X11</span>
+        <span class="project-badge">LightDM</span>
+        <span class="project-badge">MIT</span>
+      </div>
+      <div class="project-actions">
+        <a class="nav-button" href="https://github.com/LukeLeFox/pixelos-amd64-remix" target="_blank" rel="noopener"><span aria-hidden="true">./</span>source <small>GitHub ↗</small></a>
+        <a class="nav-button" href="https://github.com/LukeLeFox/pixelos-amd64-remix#quick-start" target="_blank" rel="noopener"><span aria-hidden="true">./</span>quick start <small>README ↗</small></a>
+      </div>
+    </section>
+
+    <div class="section-title"><span>01</span> Project overview</div>
+
+    <main class="list">
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">01</span>
+          <h2>Highlights</h2>
+          <span class="repo-link">usable</span>
+        </div>
+        <ul class="project-list">
+          <li>Adds the Raspberry Pi Debian archive with a dedicated keyring</li>
+          <li>Keeps Debian as the base system using conservative APT pinning</li>
+          <li>Installs Raspberry Pi Desktop / RPD packages on amd64</li>
+          <li>Uses a stable X11 rpd-x session by default</li>
+          <li>Can migrate networking to NetworkManager when appropriate</li>
+          <li>Includes diagnostics and an installation report</li>
+        </ul>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">02</span>
+          <h2>Target environment</h2>
+          <span class="repo-link">Debian 13</span>
+        </div>
+        <div class="project-copy"><p><span class="language-label">Base</span> Clean Debian 13 Trixie amd64, ideally starting from a minimal or server-style installation.</p><p><span class="language-label">Session</span> The current stable target is <code>rpd-x</code> on X11; Wayland components may be installed but are not the default.</p></div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">03</span>
+          <h2>Project scope</h2>
+          <span class="repo-link">unofficial</span>
+        </div>
+        <p class="project-note">This is an unofficial community experiment. It does not produce an official Raspberry Pi OS image and is not affiliated with or endorsed by Raspberry Pi Ltd. or Debian.</p>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <span class="prompt" aria-hidden="true">$</span> Experimental post-install tooling for Debian 13 amd64.
+    </footer>
+  </div>
+</body>
+</html>
