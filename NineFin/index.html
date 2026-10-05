@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NineFin — Jellyfin client for legacy iOS 9</title>
-  <meta name="description" content="NineFin is a native Jellyfin client for legacy iOS 9 devices, including ARMv7 iPhone and iPad hardware. Download a prebuilt IPA or build from source with Theos." />
+  <title>NineFin — Client Jellyfin nativo / Native Jellyfin client</title>
+  <meta name="description" content="NineFin è un client Jellyfin nativo per dispositivi iOS 9 legacy. NineFin is a native Jellyfin client for legacy iOS 9 devices." />
   <meta name="keywords" content="NineFin, Jellyfin, iOS 9, Jellyfin iOS 9, Jellyfin iPhone 4S, Jellyfin IPA, legacy iOS, ARMv7, old iPhone, old iPad, Theos" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://lukelefox.github.io/NineFin/" />
@@ -55,7 +55,7 @@
         <div class="brand-text">
           <div class="eyebrow">~/lukelefox/NineFin</div>
           <h1>NineFin</h1>
-          <p><span class="prompt" aria-hidden="true">$</span> native Jellyfin client · legacy iOS 9 · ARMv7</p>
+          <p><span class="prompt" aria-hidden="true">$</span> client Jellyfin nativo / native Jellyfin client · iOS 9 legacy · ARMv7</p>
         </div>
       </div>
 
@@ -67,13 +67,19 @@
     <section class="disclosure project-summary" aria-labelledby="ninefin-status">
       <div class="disclosure-title" id="ninefin-status">
         <span class="status-dot" aria-hidden="true"></span>
-        NineFin 0.7.2 · current release
+        NineFin 0.7.2 · release corrente / current release
       </div>
 
-      <p>
-        NineFin is a native Jellyfin client built specifically for legacy iPhone and iPad devices running iOS 9.
-        It is written in Objective-C with Theos and targets 32-bit ARMv7 hardware.
-      </p>
+      <div class="language-grid">
+        <div class="language-block">
+          <span class="language-label">Italiano</span>
+          <p>NineFin è un client Jellyfin nativo creato specificamente per i vecchi iPhone e iPad con iOS 9. È scritto in Objective-C con Theos ed è destinato all'hardware ARMv7 a 32 bit.</p>
+        </div>
+        <div class="language-block">
+          <span class="language-label">English</span>
+          <p>NineFin is a native Jellyfin client built specifically for legacy iPhone and iPad devices running iOS 9. It is written in Objective-C with Theos and targets 32-bit ARMv7 hardware.</p>
+        </div>
+      </div>
 
       <div class="project-badges" aria-label="Compatibility">
         <span class="project-badge">iOS 9</span>
@@ -85,32 +91,32 @@
 
       <div class="project-actions">
         <a class="nav-button" href="https://github.com/LukeLeFox/NineFin/releases/latest">
-          <span aria-hidden="true">↓</span>download <small>Prebuilt IPA</small>
+          <span aria-hidden="true">↓</span>scarica / download <small>IPA precompilata</small>
         </a>
         <a class="nav-button" href="https://github.com/LukeLeFox/NineFin" target="_blank" rel="noopener">
-          <span aria-hidden="true">./</span>source <small>GitHub ↗</small>
+          <span aria-hidden="true">./</span>sorgente / source <small>GitHub ↗</small>
         </a>
       </div>
     </section>
 
-    <div class="section-title"><span>01</span> About NineFin</div>
+    <div class="section-title"><span>01</span> Informazioni su NineFin / About NineFin</div>
 
     <main class="list">
       <article class="item">
         <div class="project-head">
           <span class="project-index">01</span>
-          <h2>Jellyfin on legacy Apple hardware</h2>
+          <h2>Jellyfin su hardware Apple legacy / Jellyfin on legacy Apple hardware</h2>
           <span class="repo-link">iOS 9</span>
         </div>
         <div class="project-copy">
           <p>
+            <span class="language-label">Italiano</span>
+            Un'esperienza Jellyfin nativa pensata per riportare lo streaming su dispositivi legacy come iPhone 4S e vecchi iPad con iOS 9, senza dipendere da un browser moderno o da un client App Store corrente.
+          </p>
+          <p>
             <span class="language-label">English</span>
             A native Jellyfin experience for legacy devices such as the iPhone 4S and older iPads,
             without depending on a modern browser or a current App Store client.
-          </p>
-          <p>
-            <span class="language-label">Italiano</span>
-            Un client Jellyfin nativo pensato per riportare lo streaming sui vecchi iPhone e iPad con iOS 9.
           </p>
         </div>
       </article>
@@ -118,38 +124,58 @@
       <article class="item">
         <div class="project-head">
           <span class="project-index">02</span>
-          <h2>Features</h2>
+          <h2>Funzioni / Features</h2>
           <span class="repo-link">native UIKit</span>
         </div>
-        <ul class="project-list">
-          <li>Jellyfin login with sessions and credentials stored in the iOS Keychain</li>
-          <li>Multiple saved servers and selectable default server</li>
-          <li>Continue Watching, Next Up, recent movies and recent series</li>
-          <li>Movies, shows, seasons and episodes</li>
-          <li>Global search and favorites</li>
-          <li>Native HLS playback with configurable streaming quality</li>
-          <li>Playback progress synchronization and watched-state handling</li>
-          <li>Audio-track and subtitle selection</li>
-        </ul>
+        <div class="language-grid">
+          <div class="language-block">
+            <span class="language-label">Italiano</span>
+            <ul class="project-list">
+              <li>Accesso Jellyfin con sessioni e credenziali conservate nel portachiavi iOS</li>
+              <li>Più server salvati e server predefinito selezionabile</li>
+              <li>Continua a guardare, Prossimi, film e serie recenti</li>
+              <li>Film, serie, stagioni ed episodi</li>
+              <li>Ricerca globale e preferiti</li>
+              <li>Riproduzione HLS nativa con qualità configurabile</li>
+              <li>Sincronizzazione dell'avanzamento e gestione dello stato visto</li>
+              <li>Selezione di tracce audio e sottotitoli</li>
+            </ul>
+          </div>
+          <div class="language-block">
+            <span class="language-label">English</span>
+            <ul class="project-list">
+              <li>Jellyfin login with sessions and credentials stored in the iOS Keychain</li>
+              <li>Multiple saved servers and selectable default server</li>
+              <li>Continue Watching, Next Up, recent movies and recent series</li>
+              <li>Movies, shows, seasons and episodes</li>
+              <li>Global search and favorites</li>
+              <li>Native HLS playback with configurable streaming quality</li>
+              <li>Playback progress synchronization and watched-state handling</li>
+              <li>Audio-track and subtitle selection</li>
+            </ul>
+          </div>
+        </div>
       </article>
 
       <article class="item">
         <div class="project-head">
           <span class="project-index">03</span>
-          <h2>Download prebuilt IPA</h2>
+          <h2>Scarica l'IPA precompilata / Download prebuilt IPA</h2>
           <span class="repo-link">GitHub Releases</span>
         </div>
 
         <div class="project-copy">
           <p>
-            <span class="language-label">Release</span>
-            Prebuilt IPA files are published with NineFin releases, so compiling from source is optional.
-            <a class="project-link" href="https://github.com/LukeLeFox/NineFin/releases/latest">Open the latest release ↗</a>
+            <span class="language-label">Italiano</span>
+            Le release di NineFin includono IPA precompilate, quindi la compilazione dai sorgenti è facoltativa.
+            L'installazione su dispositivi iOS 9 legacy richiede un metodo di sideload compatibile; i test sono stati eseguiti su un dispositivo jailbroken con AppSync Unified.
+            <a class="project-link" href="https://github.com/LukeLeFox/NineFin/releases/latest">Apri l'ultima release ↗</a>
           </p>
           <p>
-            <span class="language-label">Install</span>
-            On legacy iOS 9 hardware, installation requires a compatible IPA sideload method.
-            A jailbroken device with AppSync Unified is the recommended setup used during testing.
+            <span class="language-label">English</span>
+            Prebuilt IPA files are published with NineFin releases, so compiling from source is optional.
+            Installation on legacy iOS 9 hardware requires a compatible IPA sideload method; testing used a jailbroken device with AppSync Unified.
+            <a class="project-link" href="https://github.com/LukeLeFox/NineFin/releases/latest">Open the latest release ↗</a>
           </p>
         </div>
 
@@ -165,7 +191,7 @@
       <article class="item">
         <div class="project-head">
           <span class="project-index">04</span>
-          <h2>Build from source</h2>
+          <h2>Compila dai sorgenti / Build from source</h2>
           <span class="repo-link">Theos</span>
         </div>
 
@@ -173,28 +199,32 @@
           <div><span class="terminal-key">$</span><span class="terminal-equals"></span><span class="terminal-value">FINALPACKAGE=1 make package</span></div>
         </div>
 
-        <p class="project-note">
-          Requires Theos with an iOS 9.2 SDK. The project intentionally keeps its legacy deployment settings;
-          changing the target SDK, deployment target or architecture may break compatibility.
-        </p>
+        <div class="project-copy">
+          <p><span class="language-label">Italiano</span> Richiede Theos con SDK iOS 9.2. Il progetto mantiene intenzionalmente le impostazioni di distribuzione legacy; cambiare SDK, deployment target o architettura può compromettere la compatibilità.</p>
+          <p><span class="language-label">English</span> Requires Theos with an iOS 9.2 SDK. The project intentionally keeps its legacy deployment settings; changing the target SDK, deployment target or architecture may break compatibility.</p>
+        </div>
       </article>
     </main>
 
-    <div class="section-title"><span>02</span> Project links</div>
+    <div class="section-title"><span>02</span> Collegamenti del progetto / Project links</div>
 
     <section class="about-grid">
       <div class="about-card">
-        <span class="language-label">Source</span>
+        <span class="language-label">Italiano</span>
         <p>
-          Browse the source code, MIT license and development history on
-          <a class="project-link" href="https://github.com/LukeLeFox/NineFin" target="_blank" rel="noopener">GitHub ↗</a>.
+          Consulta i sorgenti, la licenza MIT e la cronologia di sviluppo su
+          <a class="project-link" href="https://github.com/LukeLeFox/NineFin" target="_blank" rel="noopener">GitHub ↗</a>,
+          oppure scarica l'ultima IPA precompilata da
+          <a class="project-link" href="https://github.com/LukeLeFox/NineFin/releases/latest">GitHub Releases ↗</a>.
         </p>
       </div>
 
       <div class="about-card">
-        <span class="language-label">Releases</span>
+        <span class="language-label">English</span>
         <p>
-          Download the latest prebuilt IPA from
+          Browse the source code, MIT license and development history on
+          <a class="project-link" href="https://github.com/LukeLeFox/NineFin" target="_blank" rel="noopener">GitHub ↗</a>,
+          or download the latest prebuilt IPA from
           <a class="project-link" href="https://github.com/LukeLeFox/NineFin/releases/latest">GitHub Releases ↗</a>.
         </p>
       </div>
@@ -202,7 +232,7 @@
 
     <footer class="footer">
       <span class="prompt" aria-hidden="true">$</span>
-      NineFin is an independent community project and is not affiliated with or endorsed by Jellyfin.
+      NineFin è un progetto indipendente della comunità e non è affiliato né approvato da Jellyfin. / NineFin is an independent community project and is not affiliated with or endorsed by Jellyfin.
     </footer>
 
   </div>

@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NineHA — Home Assistant client for legacy iOS 9</title>
-  <meta name="description" content="NineHA is an experimental native Home Assistant client for legacy iOS 9 devices, including iPhone 4S and first-generation iPad mini, with UIKit dashboards and ARMv7 support." />
+  <title>NineHA — Client Home Assistant nativo / Native Home Assistant client</title>
+  <meta name="description" content="NineHA è un client Home Assistant nativo e sperimentale per dispositivi iOS 9. NineHA is an experimental native Home Assistant client for legacy iOS 9 devices." />
   <meta name="keywords" content="NineHA, Home Assistant iOS 9, Home Assistant iPhone 4S, Home Assistant old iPad, legacy iOS, ARMv7, UIKit, Lovelace client" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://lukelefox.github.io/NineHA/" />
@@ -36,9 +36,18 @@
     <section class="disclosure project-summary" aria-labelledby="NineHA-status">
       <div class="disclosure-title" id="NineHA-status">
         <span class="status-dot" aria-hidden="true"></span>
-        v0.7.7 · experimental
+        v0.7.7 · sperimentale / experimental
       </div>
-      <p>NineHA brings a native Home Assistant experience to devices stuck on iOS 9, with a UIKit Lovelace-style dashboard, live updates and support for both iPad and iPhone legacy hardware.</p>
+      <div class="language-grid">
+        <div class="language-block">
+          <span class="language-label">Italiano</span>
+          <p>NineHA porta un'esperienza Home Assistant nativa sui dispositivi fermi a iOS 9, con dashboard UIKit ispirata a Lovelace, aggiornamenti live e supporto per i vecchi iPad e iPhone.</p>
+        </div>
+        <div class="language-block">
+          <span class="language-label">English</span>
+          <p>NineHA brings a native Home Assistant experience to devices stuck on iOS 9, with a UIKit Lovelace-style dashboard, live updates and support for legacy iPad and iPhone hardware.</p>
+        </div>
+      </div>
       <div class="project-badges" aria-label="Project technologies">
         <span class="project-badge">Home Assistant</span>
         <span class="project-badge">iOS 9</span>
@@ -48,51 +57,67 @@
         <span class="project-badge">MIT</span>
       </div>
       <div class="project-actions">
-        <a class="nav-button" href="https://github.com/LukeLeFox/NineHA/releases/latest" target="_blank" rel="noopener"><span aria-hidden="true">↓</span>download <small>Prebuilt IPA ↗</small></a>
-        <a class="nav-button" href="https://github.com/LukeLeFox/NineHA" target="_blank" rel="noopener"><span aria-hidden="true">./</span>source <small>GitHub ↗</small></a>
+        <a class="nav-button" href="https://github.com/LukeLeFox/NineHA/releases/latest" target="_blank" rel="noopener"><span aria-hidden="true">↓</span>scarica / download <small>IPA precompilata ↗</small></a>
+        <a class="nav-button" href="https://github.com/LukeLeFox/NineHA" target="_blank" rel="noopener"><span aria-hidden="true">./</span>sorgente / source <small>GitHub ↗</small></a>
       </div>
     </section>
 
-    <div class="section-title"><span>01</span> Project overview</div>
+    <div class="section-title"><span>01</span> Panoramica / Project overview</div>
 
     <main class="list">
       <article class="item">
         <div class="project-head">
           <span class="project-index">01</span>
-          <h2>Highlights</h2>
-          <span class="repo-link">experimental</span>
+          <h2>Funzioni principali / Highlights</h2>
+          <span class="repo-link">sperimentale / experimental</span>
         </div>
-        <ul class="project-list">
-          <li>Manual token authentication and experimental OAuth flow</li>
-          <li>Native UIKit dashboard plus optional original Lovelace WebView</li>
-          <li>Live updates over WebSocket with REST fallback</li>
-          <li>Layouts for masonry, grid, sections and conditional content</li>
-          <li>Native adapters for multiple standard and custom card types</li>
-          <li>Responsive dark interface for legacy iPad and iPhone screens</li>
-        </ul>
+        <div class="language-grid">
+          <div class="language-block">
+            <span class="language-label">Italiano</span>
+            <ul class="project-list">
+              <li>Autenticazione con token manuale e flusso OAuth sperimentale</li>
+              <li>Dashboard UIKit nativa e Lovelace originale opzionale in WebView</li>
+              <li>Aggiornamenti live tramite WebSocket con fallback REST</li>
+              <li>Layout masonry, grid, sections e contenuti conditional</li>
+              <li>Adattatori nativi per diverse card standard e personalizzate</li>
+              <li>Interfaccia scura responsiva per i vecchi schermi iPad e iPhone</li>
+            </ul>
+          </div>
+          <div class="language-block">
+            <span class="language-label">English</span>
+            <ul class="project-list">
+              <li>Manual token authentication and experimental OAuth flow</li>
+              <li>Native UIKit dashboard plus optional original Lovelace WebView</li>
+              <li>Live updates over WebSocket with REST fallback</li>
+              <li>Layouts for masonry, grid, sections and conditional content</li>
+              <li>Native adapters for multiple standard and custom card types</li>
+              <li>Responsive dark interface for legacy iPad and iPhone screens</li>
+            </ul>
+          </div>
+        </div>
       </article>
 
       <article class="item">
         <div class="project-head">
           <span class="project-index">02</span>
-          <h2>Prebuilt ARMv7 IPA</h2>
+          <h2>IPA ARMv7 precompilata / Prebuilt ARMv7 IPA</h2>
           <span class="repo-link">0.7.7</span>
         </div>
-        <div class="project-copy"><p><span class="language-label">Release</span> A precompiled ARMv7 IPA is published with the project release for compatible legacy devices.</p><p><span class="language-label">Tested</span> Development has been tested on a first-generation iPad mini and iPhone 4S.</p></div>
+        <div class="project-copy"><p><span class="language-label">Italiano</span> Una IPA ARMv7 precompilata viene pubblicata con la release per i dispositivi legacy compatibili. Lo sviluppo è stato collaudato su iPad mini di prima generazione e iPhone 4S.</p><p><span class="language-label">English</span> A precompiled ARMv7 IPA is published with the project release for compatible legacy devices. Development has been tested on a first-generation iPad mini and iPhone 4S.</p></div>
       </article>
 
       <article class="item">
         <div class="project-head">
           <span class="project-index">03</span>
-          <h2>Home Assistant integration</h2>
-          <span class="repo-link">native client</span>
+          <h2>Integrazione Home Assistant / Home Assistant integration</h2>
+          <span class="repo-link">client nativo / native client</span>
         </div>
-        <div class="project-copy"><p><span class="language-label">Dashboard</span> Rebuilds key Lovelace concepts with native UIKit components instead of relying entirely on modern browser features.</p><p><span class="language-label">Security</span> Saved app tokens are kept in the iOS Keychain; HTTPS or a VPN is recommended when possible.</p></div>
+        <div class="project-copy"><p><span class="language-label">Italiano</span> Ricostruisce i concetti principali di Lovelace con componenti UIKit nativi invece di dipendere interamente dalle funzioni dei browser moderni. I token salvati vengono conservati nel portachiavi iOS; quando possibile sono consigliati HTTPS o una VPN.</p><p><span class="language-label">English</span> Rebuilds key Lovelace concepts with native UIKit components instead of relying entirely on modern browser features. Saved app tokens are kept in the iOS Keychain; HTTPS or a VPN is recommended when possible.</p></div>
       </article>
     </main>
 
     <footer class="footer">
-      <span class="prompt" aria-hidden="true">$</span> NineHA is an independent experimental project and is not affiliated with Home Assistant or Nabu Casa.
+      <span class="prompt" aria-hidden="true">$</span> NineHA è un progetto sperimentale indipendente e non è affiliato a Home Assistant o Nabu Casa. / NineHA is an independent experimental project and is not affiliated with Home Assistant or Nabu Casa.
     </footer>
   </div>
 </body>

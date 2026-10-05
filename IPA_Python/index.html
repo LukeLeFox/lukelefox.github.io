@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IPA_Python — IP address notifier for Telegram</title>
-  <meta name="description" content="IPA_Python is a small Python utility that detects a device's public and private IP addresses and sends them to a configured Telegram chat." />
+  <title>IPA_Python — Notificatore IP / IP address notifier</title>
+  <meta name="description" content="IPA_Python rileva gli indirizzi IP pubblici e privati e li invia tramite Telegram. IPA_Python detects public and private IP addresses and sends them through Telegram." />
   <meta name="keywords" content="IPA_Python, Python IP address, Telegram IP notifier, public IP, private IP, Raspberry Pi IP notification, network utility" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://lukelefox.github.io/IPA_Python/" />
@@ -25,7 +25,7 @@
         <div class="brand-text">
           <div class="eyebrow">~/lukelefox/IPA_Python</div>
           <h1>IPA_Python</h1>
-          <p><span class="prompt" aria-hidden="true">$</span> Python · public/private IP discovery · Telegram</p>
+          <p><span class="prompt" aria-hidden="true">$</span> Python · rilevamento IP pubblici e privati / public and private IP discovery · Telegram</p>
         </div>
       </div>
       <nav class="topnav" aria-label="IPA_Python navigation">
@@ -36,9 +36,18 @@
     <section class="disclosure project-summary" aria-labelledby="IPA_Python-status">
       <div class="disclosure-title" id="IPA_Python-status">
         <span class="status-dot" aria-hidden="true"></span>
-        utility · simple script
+        utility · script semplice / simple script
       </div>
-      <p>IPA_Python is a compact utility for reporting a device's current public and private IP addresses through Telegram, useful for small servers, Raspberry Pi systems and remote devices.</p>
+      <div class="language-grid">
+        <div class="language-block">
+          <span class="language-label">Italiano</span>
+          <p>IPA_Python è una piccola utility che comunica tramite Telegram gli indirizzi IP pubblici e privati correnti di un dispositivo, utile per piccoli server, sistemi Raspberry Pi e dispositivi remoti.</p>
+        </div>
+        <div class="language-block">
+          <span class="language-label">English</span>
+          <p>IPA_Python is a compact utility for reporting a device's current public and private IP addresses through Telegram, useful for small servers, Raspberry Pi systems and remote devices.</p>
+        </div>
+      </div>
       <div class="project-badges" aria-label="Project technologies">
         <span class="project-badge">Python 3.8+</span>
         <span class="project-badge">Telegram</span>
@@ -46,50 +55,66 @@
         <span class="project-badge">Linux/macOS</span>
       </div>
       <div class="project-actions">
-        <a class="nav-button" href="https://github.com/LukeLeFox/IPA_Python" target="_blank" rel="noopener"><span aria-hidden="true">./</span>source <small>GitHub ↗</small></a>
+        <a class="nav-button" href="https://github.com/LukeLeFox/IPA_Python" target="_blank" rel="noopener"><span aria-hidden="true">./</span>sorgente / source <small>GitHub ↗</small></a>
       </div>
     </section>
 
-    <div class="section-title"><span>01</span> Project overview</div>
+    <div class="section-title"><span>01</span> Panoramica / Project overview</div>
 
     <main class="list">
       <article class="item">
         <div class="project-head">
           <span class="project-index">01</span>
-          <h2>Highlights</h2>
-          <span class="repo-link">simple script</span>
+          <h2>Funzioni principali / Highlights</h2>
+          <span class="repo-link">script semplice / simple script</span>
         </div>
-        <ul class="project-list">
-          <li>Detects internet connectivity</li>
-          <li>Retrieves the current public IP address</li>
-          <li>Finds local/private IP addresses</li>
-          <li>Sends a readable Telegram notification</li>
-          <li>Linux-oriented with a socket fallback when the ip command is unavailable</li>
-          <li>Minimal dependencies and easy manual execution</li>
-        </ul>
+        <div class="language-grid">
+          <div class="language-block">
+            <span class="language-label">Italiano</span>
+            <ul class="project-list">
+              <li>Verifica la connettività Internet</li>
+              <li>Recupera l'indirizzo IP pubblico corrente</li>
+              <li>Individua gli indirizzi IP locali e privati</li>
+              <li>Invia una notifica Telegram leggibile</li>
+              <li>Orientato a Linux, con fallback socket quando il comando <code>ip</code> non è disponibile</li>
+              <li>Dipendenze minime ed esecuzione manuale immediata</li>
+            </ul>
+          </div>
+          <div class="language-block">
+            <span class="language-label">English</span>
+            <ul class="project-list">
+              <li>Detects internet connectivity</li>
+              <li>Retrieves the current public IP address</li>
+              <li>Finds local/private IP addresses</li>
+              <li>Sends a readable Telegram notification</li>
+              <li>Linux-oriented with a socket fallback when the <code>ip</code> command is unavailable</li>
+              <li>Minimal dependencies and easy manual execution</li>
+            </ul>
+          </div>
+        </div>
       </article>
 
       <article class="item">
         <div class="project-head">
           <span class="project-index">02</span>
-          <h2>Typical use</h2>
-          <span class="repo-link">network utility</span>
+          <h2>Utilizzo tipico / Typical use</h2>
+          <span class="repo-link">utility di rete / network utility</span>
         </div>
-        <div class="project-copy"><p><span class="language-label">Use case</span> Run it when a device starts or on demand to receive the machine's current network addresses in Telegram.</p><p><span class="language-label">Platforms</span> Primarily Linux, with a socket-based fallback for systems such as macOS.</p></div>
+        <div class="project-copy"><p><span class="language-label">Italiano</span> Può essere eseguito all'avvio del dispositivo o su richiesta per ricevere su Telegram gli indirizzi di rete correnti. È pensato principalmente per Linux, con un fallback basato su socket per sistemi come macOS.</p><p><span class="language-label">English</span> Run it when a device starts or on demand to receive the machine's current network addresses in Telegram. It primarily targets Linux, with a socket-based fallback for systems such as macOS.</p></div>
       </article>
 
       <article class="item">
         <div class="project-head">
           <span class="project-index">03</span>
-          <h2>Credential hygiene</h2>
-          <span class="repo-link">security</span>
+          <h2>Protezione delle credenziali / Credential hygiene</h2>
+          <span class="repo-link">sicurezza / security</span>
         </div>
-        <p class="project-note"><strong>Important:</strong> keep real Telegram bot tokens and chat identifiers private. Review the repository configuration before deploying the script on a public or shared system.</p>
+        <div class="project-copy"><p><span class="language-label">Italiano</span> <strong>Importante:</strong> mantieni privati i token reali dei bot Telegram e gli identificativi delle chat. Controlla la configurazione del repository prima di distribuire lo script su un sistema pubblico o condiviso.</p><p><span class="language-label">English</span> <strong>Important:</strong> keep real Telegram bot tokens and chat identifiers private. Review the repository configuration before deploying the script on a public or shared system.</p></div>
       </article>
     </main>
 
     <footer class="footer">
-      <span class="prompt" aria-hidden="true">$</span> A small personal Python networking utility.
+      <span class="prompt" aria-hidden="true">$</span> Una piccola utility personale di rete in Python. / A small personal Python networking utility.
     </footer>
   </div>
 </body>

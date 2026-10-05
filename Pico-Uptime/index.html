@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pico Uptime — Raspberry Pi Pico W network monitor</title>
-  <meta name="description" content="Pico Uptime is a lightweight autonomous network monitor for Raspberry Pi Pico W with HTTP, TCP and ICMP checks, a responsive web dashboard and Telegram notifications." />
+  <title>Pico Uptime — Monitor di rete / Network monitor</title>
+  <meta name="description" content="Pico Uptime è un monitor di rete autonomo per Raspberry Pi Pico W. Pico Uptime is a self-contained network monitor for Raspberry Pi Pico W." />
   <meta name="keywords" content="Pico Uptime, Raspberry Pi Pico W, MicroPython, uptime monitor, network monitor, Telegram monitoring, ICMP monitor, TCP monitor, HTTP monitor" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://lukelefox.github.io/Pico-Uptime/" />
@@ -25,7 +25,7 @@
         <div class="brand-text">
           <div class="eyebrow">~/lukelefox/Pico-Uptime</div>
           <h1>Pico Uptime</h1>
-          <p><span class="prompt" aria-hidden="true">$</span> Raspberry Pi Pico W · MicroPython · network monitoring</p>
+          <p><span class="prompt" aria-hidden="true">$</span> Raspberry Pi Pico W · MicroPython · monitoraggio di rete / network monitoring</p>
         </div>
       </div>
       <nav class="topnav" aria-label="Pico Uptime navigation">
@@ -36,9 +36,18 @@
     <section class="disclosure project-summary" aria-labelledby="Pico-Uptime-status">
       <div class="disclosure-title" id="Pico-Uptime-status">
         <span class="status-dot" aria-hidden="true"></span>
-        v1.1.14 · stable
+        v1.1.14 · stabile / stable
       </div>
-      <p>Pico Uptime turns a Raspberry Pi Pico W into a self-contained low-memory uptime monitor with a web dashboard, multi-protocol checks and optional Telegram alerts.</p>
+      <div class="language-grid">
+        <div class="language-block">
+          <span class="language-label">Italiano</span>
+          <p>Pico Uptime trasforma un Raspberry Pi Pico W in un monitor uptime autonomo e leggero, con dashboard web, controlli multiprotocollo e notifiche Telegram opzionali.</p>
+        </div>
+        <div class="language-block">
+          <span class="language-label">English</span>
+          <p>Pico Uptime turns a Raspberry Pi Pico W into a self-contained low-memory uptime monitor with a web dashboard, multi-protocol checks and optional Telegram alerts.</p>
+        </div>
+      </div>
       <div class="project-badges" aria-label="Project technologies">
         <span class="project-badge">Pico W</span>
         <span class="project-badge">MicroPython</span>
@@ -47,51 +56,67 @@
         <span class="project-badge">GPL-3.0</span>
       </div>
       <div class="project-actions">
-        <a class="nav-button" href="https://github.com/LukeLeFox/Pico-Uptime" target="_blank" rel="noopener"><span aria-hidden="true">./</span>source <small>GitHub ↗</small></a>
-        <a class="nav-button" href="https://github.com/LukeLeFox/Pico-Uptime#installazione" target="_blank" rel="noopener"><span aria-hidden="true">./</span>setup <small>README ↗</small></a>
+        <a class="nav-button" href="https://github.com/LukeLeFox/Pico-Uptime" target="_blank" rel="noopener"><span aria-hidden="true">./</span>sorgente / source <small>GitHub ↗</small></a>
+        <a class="nav-button" href="https://github.com/LukeLeFox/Pico-Uptime#installazione" target="_blank" rel="noopener"><span aria-hidden="true">./</span>configura / setup <small>README ↗</small></a>
       </div>
     </section>
 
-    <div class="section-title"><span>01</span> Project overview</div>
+    <div class="section-title"><span>01</span> Panoramica / Project overview</div>
 
     <main class="list">
       <article class="item">
         <div class="project-head">
           <span class="project-index">01</span>
-          <h2>Highlights</h2>
-          <span class="repo-link">stable</span>
+          <h2>Funzioni principali / Highlights</h2>
+          <span class="repo-link">stabile / stable</span>
         </div>
-        <ul class="project-list">
-          <li>HTTP/HTTPS, TCP and ICMP monitoring with RTT</li>
-          <li>Responsive low-memory web dashboard</li>
-          <li>Telegram multi-chat notifications and per-target alert routing</li>
-          <li>Persistent polling thresholds and JSON configuration</li>
-          <li>Basic Auth protection and Wi-Fi recovery</li>
-          <li>Designed for microcontroller memory constraints</li>
-        </ul>
+        <div class="language-grid">
+          <div class="language-block">
+            <span class="language-label">Italiano</span>
+            <ul class="project-list">
+              <li>Monitoraggio HTTP/HTTPS, TCP e ICMP con RTT</li>
+              <li>Dashboard web responsiva e a basso consumo di memoria</li>
+              <li>Notifiche Telegram multi-chat e instradamento degli avvisi per target</li>
+              <li>Soglie di polling persistenti e configurazione JSON</li>
+              <li>Protezione Basic Auth e ripristino Wi-Fi</li>
+              <li>Progettato per i limiti di memoria dei microcontrollori</li>
+            </ul>
+          </div>
+          <div class="language-block">
+            <span class="language-label">English</span>
+            <ul class="project-list">
+              <li>HTTP/HTTPS, TCP and ICMP monitoring with RTT</li>
+              <li>Responsive low-memory web dashboard</li>
+              <li>Telegram multi-chat notifications and per-target alert routing</li>
+              <li>Persistent polling thresholds and JSON configuration</li>
+              <li>Basic Auth protection and Wi-Fi recovery</li>
+              <li>Designed for microcontroller memory constraints</li>
+            </ul>
+          </div>
+        </div>
       </article>
 
       <article class="item">
         <div class="project-head">
           <span class="project-index">02</span>
-          <h2>Target hardware</h2>
+          <h2>Hardware supportato / Target hardware</h2>
           <span class="repo-link">Pico W</span>
         </div>
-        <div class="project-copy"><p><span class="language-label">Hardware</span> Raspberry Pi Pico W with a recent MicroPython build and 2.4 GHz Wi-Fi.</p><p><span class="language-label">Design</span> No database or heavy web framework: the project is intentionally compact and autonomous.</p></div>
+        <div class="project-copy"><p><span class="language-label">Italiano</span> Raspberry Pi Pico W con una versione recente di MicroPython e Wi-Fi a 2,4 GHz. Nessun database o framework web pesante: il progetto è volutamente compatto e autonomo.</p><p><span class="language-label">English</span> Raspberry Pi Pico W with a recent MicroPython build and 2.4 GHz Wi-Fi. No database or heavy web framework: the project is intentionally compact and autonomous.</p></div>
       </article>
 
       <article class="item">
         <div class="project-head">
           <span class="project-index">03</span>
-          <h2>Monitoring and alerts</h2>
-          <span class="repo-link">network</span>
+          <h2>Monitoraggio e avvisi / Monitoring and alerts</h2>
+          <span class="repo-link">rete / network</span>
         </div>
-        <div class="project-copy"><p><span class="language-label">Checks</span> Monitor HTTP/HTTPS endpoints, TCP services and ICMP reachability with configurable polling thresholds.</p><p><span class="language-label">Telegram</span> Route transition alerts to one or more chats, with retry logic and per-target notification settings.</p></div>
+        <div class="project-copy"><p><span class="language-label">Italiano</span> Monitora endpoint HTTP/HTTPS, servizi TCP e raggiungibilità ICMP con soglie di polling configurabili. Gli avvisi di cambio stato possono essere inviati a una o più chat Telegram, con retry e impostazioni per target.</p><p><span class="language-label">English</span> Monitor HTTP/HTTPS endpoints, TCP services and ICMP reachability with configurable polling thresholds. Route transition alerts to one or more Telegram chats, with retry logic and per-target notification settings.</p></div>
       </article>
     </main>
 
     <footer class="footer">
-      <span class="prompt" aria-hidden="true">$</span> Pico Uptime is a personal open-source project released under GPL-3.0.
+      <span class="prompt" aria-hidden="true">$</span> Pico Uptime è un progetto personale open source distribuito con licenza GPL-3.0. / Pico Uptime is a personal open-source project released under GPL-3.0.
     </footer>
   </div>
 </body>
