@@ -4,24 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NineHA — Client Home Assistant nativo / Native Home Assistant client</title>
-  <meta name="description" content="NineHA è un client Home Assistant nativo e sperimentale per dispositivi iOS 9. NineHA is an experimental native Home Assistant client for legacy iOS 9 devices." />
+  <meta name="description" content="NineHA è un client Home Assistant nativo per iOS 9 con dashboard UIKit, rotazione automatica e azioni Lovelace call-service e perform-action." />
   <meta name="keywords" content="NineHA, Home Assistant iOS 9, Home Assistant iPhone 4S, Home Assistant old iPad, legacy iOS, ARMv7, UIKit, Lovelace client" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://lukelefox.github.io/NineHA/" />
   <link rel="stylesheet" href="../assets/css/style.css?v=17" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="NineHA — Home Assistant client for legacy iOS 9" />
-  <meta property="og:description" content="NineHA is an experimental native Home Assistant client for legacy iOS 9 devices, including iPhone 4S and first-generation iPad mini, with UIKit dashboards and ARMv7 support." />
+  <meta property="og:description" content="NineHA 0.7.8 is a native Home Assistant client for legacy iOS 9 devices with responsive UIKit dashboards, automatic rotation and Lovelace service actions." />
   <meta property="og:url" content="https://lukelefox.github.io/NineHA/" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/Resources/Icon-76%402x.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="NineHA — Home Assistant client for legacy iOS 9" />
-  <meta name="twitter:description" content="NineHA is an experimental native Home Assistant client for legacy iOS 9 devices, including iPhone 4S and first-generation iPad mini, with UIKit dashboards and ARMv7 support." />
+  <meta name="twitter:description" content="NineHA 0.7.8 brings responsive UIKit dashboards, automatic rotation and Lovelace service actions to legacy iOS 9 devices." />
 </head>
 <body>
   <div class="container">
     <header class="topbar">
       <div class="brand">
-        <div class="project-mark" aria-hidden="true">HA</div>
+        <img
+          src="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/Resources/Icon-76%402x.png"
+          alt="NineHA app icon"
+          class="project-app-icon"
+        />
         <div class="brand-text">
           <div class="eyebrow">~/lukelefox/NineHA</div>
           <h1>NineHA</h1>
@@ -36,16 +41,16 @@
     <section class="disclosure project-summary" aria-labelledby="NineHA-status">
       <div class="disclosure-title" id="NineHA-status">
         <span class="status-dot" aria-hidden="true"></span>
-        v0.7.7 · sperimentale / experimental
+        v0.7.8 build 47 · sperimentale / experimental
       </div>
       <div class="language-grid">
         <div class="language-block">
           <span class="language-label">Italiano</span>
-          <p>NineHA porta un'esperienza Home Assistant nativa sui dispositivi fermi a iOS 9, con dashboard UIKit ispirata a Lovelace, aggiornamenti live e supporto per i vecchi iPad e iPhone.</p>
+          <p>NineHA porta un'esperienza Home Assistant nativa sui dispositivi fermi a iOS 9, con dashboard UIKit ispirata a Lovelace, aggiornamenti live, rotazione automatica e azioni sui servizi Home Assistant.</p>
         </div>
         <div class="language-block">
           <span class="language-label">English</span>
-          <p>NineHA brings a native Home Assistant experience to devices stuck on iOS 9, with a UIKit Lovelace-style dashboard, live updates and support for legacy iPad and iPhone hardware.</p>
+          <p>NineHA brings a native Home Assistant experience to devices stuck on iOS 9, with a UIKit Lovelace-style dashboard, live updates, automatic rotation and Home Assistant service actions.</p>
         </div>
       </div>
       <div class="project-badges" aria-label="Project technologies">
@@ -80,6 +85,8 @@
               <li>Aggiornamenti live tramite WebSocket con fallback REST</li>
               <li>Layout masonry, grid, sections e contenuti conditional</li>
               <li>Adattatori nativi per diverse card standard e personalizzate</li>
+              <li>Azioni Lovelace <code>call-service</code> e <code>perform-action</code> con conferma</li>
+              <li>Rotazione portrait e landscape verificata su iPad mini</li>
               <li>Interfaccia scura responsiva per i vecchi schermi iPad e iPhone</li>
             </ul>
           </div>
@@ -91,6 +98,8 @@
               <li>Live updates over WebSocket with REST fallback</li>
               <li>Layouts for masonry, grid, sections and conditional content</li>
               <li>Native adapters for multiple standard and custom card types</li>
+              <li>Lovelace <code>call-service</code> and <code>perform-action</code> actions with confirmation</li>
+              <li>Portrait and landscape rotation verified on a first-generation iPad mini</li>
               <li>Responsive dark interface for legacy iPad and iPhone screens</li>
             </ul>
           </div>
@@ -101,7 +110,7 @@
         <div class="project-head">
           <span class="project-index">02</span>
           <h2>IPA ARMv7 precompilata / Prebuilt ARMv7 IPA</h2>
-          <span class="repo-link">0.7.7</span>
+          <span class="repo-link">0.7.8 · build 47</span>
         </div>
         <div class="project-copy"><p><span class="language-label">Italiano</span> Una IPA ARMv7 precompilata viene pubblicata con la release per i dispositivi legacy compatibili. Lo sviluppo è stato collaudato su iPad mini di prima generazione e iPhone 4S.</p><p><span class="language-label">English</span> A precompiled ARMv7 IPA is published with the project release for compatible legacy devices. Development has been tested on a first-generation iPad mini and iPhone 4S.</p></div>
       </article>
@@ -113,6 +122,18 @@
           <span class="repo-link">client nativo / native client</span>
         </div>
         <div class="project-copy"><p><span class="language-label">Italiano</span> Ricostruisce i concetti principali di Lovelace con componenti UIKit nativi invece di dipendere interamente dalle funzioni dei browser moderni. I token salvati vengono conservati nel portachiavi iOS; quando possibile sono consigliati HTTPS o una VPN.</p><p><span class="language-label">English</span> Rebuilds key Lovelace concepts with native UIKit components instead of relying entirely on modern browser features. Saved app tokens are kept in the iOS Keychain; HTTPS or a VPN is recommended when possible.</p></div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">04</span>
+          <h2>Nuove azioni Lovelace / New Lovelace actions</h2>
+          <span class="repo-link">0.7.8</span>
+        </div>
+        <div class="project-copy">
+          <p><span class="language-label">Italiano</span> La build 47 supporta servizi Lovelace generici tramite <code>call-service</code> e <code>perform-action</code>, inoltra <code>data</code>, <code>service_data</code> e un singolo <code>target.entity_id</code>, e richiede conferma prima dell'esecuzione. <a class="project-link" href="https://github.com/LukeLeFox/NineHA/blob/main/docs/lovelace-actions.md" target="_blank" rel="noopener">Guida completa ↗</a></p>
+          <p><span class="language-label">English</span> Build 47 supports generic Lovelace services through <code>call-service</code> and <code>perform-action</code>, forwards <code>data</code>, <code>service_data</code> and one <code>target.entity_id</code>, and asks for confirmation before execution. <a class="project-link" href="https://github.com/LukeLeFox/NineHA/blob/main/docs/lovelace-actions.md" target="_blank" rel="noopener">Full guide ↗</a></p>
+        </div>
       </article>
     </main>
 
