@@ -4,21 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NineFin — Client Jellyfin nativo / Native Jellyfin client</title>
-  <meta name="description" content="NineFin è un client Jellyfin nativo per iOS 9 e ARMv7 con download, riproduzione offline e sincronizzazione sicura dell'avanzamento." />
-  <meta name="keywords" content="NineFin, Jellyfin, iOS 9, Jellyfin offline, riproduzione offline, Jellyfin iPhone 4S, Jellyfin IPA, legacy iOS, ARMv7, old iPhone, old iPad, Theos" />
+  <meta name="description" content="NineFin è un client Jellyfin nativo per iOS 9 e ARMv7 con download in background, coda persistente, riproduzione offline e sincronizzazione sicura." />
+  <meta name="keywords" content="NineFin, Jellyfin, iOS 9, Jellyfin offline, download in background, riproduzione offline, Jellyfin iPhone 4S, Jellyfin IPA, legacy iOS, ARMv7, old iPhone, old iPad, Theos" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://lukelefox.github.io/NineFin/" />
   <link rel="stylesheet" href="../assets/css/style.css?v=17" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="NineFin — Jellyfin client for legacy iOS 9" />
-  <meta property="og:description" content="Native Jellyfin client for legacy iOS 9 with offline downloads, local playback and progress sync." />
+  <meta property="og:description" content="Native Jellyfin client for legacy iOS 9 with persistent background downloads, offline playback and progress sync." />
   <meta property="og:url" content="https://lukelefox.github.io/NineFin/" />
   <meta property="og:image" content="https://raw.githubusercontent.com/LukeLeFox/NineFin/main/Resources/Icon-76%402x.png" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="NineFin — Jellyfin client for legacy iOS 9" />
-  <meta name="twitter:description" content="Native Jellyfin client for legacy iOS 9 / ARMv7 with offline playback and progress sync." />
+  <meta name="twitter:description" content="Native Jellyfin client for legacy iOS 9 / ARMv7 with background downloads, offline playback and progress sync." />
 
   <script type="application/ld+json">
   {
@@ -27,8 +27,8 @@
     "name": "NineFin",
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "iOS 9",
-    "softwareVersion": "0.7.3",
-    "description": "Native Jellyfin client for legacy iOS 9 devices, including ARMv7 iPhone and iPad hardware.",
+    "softwareVersion": "0.7.4",
+    "description": "Native Jellyfin client for legacy iOS 9 devices with persistent background downloads, offline playback and progress synchronization.",
     "url": "https://lukelefox.github.io/NineFin/",
     "downloadUrl": "https://github.com/LukeLeFox/NineFin/releases/latest",
     "codeRepository": "https://github.com/LukeLeFox/NineFin",
@@ -67,17 +67,17 @@
     <section class="disclosure project-summary" aria-labelledby="ninefin-status">
       <div class="disclosure-title" id="ninefin-status">
         <span class="status-dot" aria-hidden="true"></span>
-        NineFin 0.7.3 · release corrente / current release · offline &amp; sync
+        NineFin 0.7.4 · release corrente / current release · background downloads
       </div>
 
       <div class="language-grid">
         <div class="language-block">
           <span class="language-label">Italiano</span>
-          <p>NineFin è un client Jellyfin nativo creato specificamente per i vecchi iPhone e iPad con iOS 9. È scritto in Objective-C con Theos, è destinato all'hardware ARMv7 a 32 bit e ora include download, riproduzione offline e sincronizzazione al ritorno online.</p>
+          <p>NineFin è un client Jellyfin nativo creato specificamente per i vecchi iPhone e iPad con iOS 9. È scritto in Objective-C con Theos, è destinato all'hardware ARMv7 a 32 bit e ora include una coda persistente, download in background, intere stagioni e riproduzione offline.</p>
         </div>
         <div class="language-block">
           <span class="language-label">English</span>
-          <p>NineFin is a native Jellyfin client built specifically for legacy iPhone and iPad devices running iOS 9. It is written in Objective-C with Theos, targets 32-bit ARMv7 hardware, and now includes downloads, offline playback and reconnect synchronization.</p>
+          <p>NineFin is a native Jellyfin client built specifically for legacy iPhone and iPad devices running iOS 9. It is written in Objective-C with Theos, targets 32-bit ARMv7 hardware, and now includes a persistent queue, background downloads, whole seasons and offline playback.</p>
         </div>
       </div>
 
@@ -87,6 +87,7 @@
         <span class="project-badge">Objective-C</span>
         <span class="project-badge">Theos</span>
         <span class="project-badge">Offline</span>
+        <span class="project-badge">Background</span>
         <span class="project-badge">MIT</span>
       </div>
 
@@ -139,8 +140,11 @@
               <li>Ricerca globale e preferiti</li>
               <li>Riproduzione HLS nativa con qualità configurabile</li>
               <li>Sincronizzazione dell'avanzamento e gestione dello stato visto</li>
-              <li>Download autenticati di film ed episodi</li>
-              <li>Schermata Scaricati con avanzamento dei trasferimenti e gestione dello spazio locale</li>
+              <li>Download autenticati di film, episodi e intere stagioni</li>
+              <li>Coda FIFO persistente con un solo trasferimento attivo</li>
+              <li>Download in background ripristinati dopo il riavvio dell'app</li>
+              <li>Una sola notifica riepilogativa al termine di una stagione</li>
+              <li>Schermata Scaricati con stato della coda, avanzamento e gestione dello spazio locale</li>
               <li>Ripresa e stato visto registrati anche offline</li>
               <li>Sincronizzazione esplicita con gestione conservativa dei conflitti</li>
               <li>Selezione di tracce audio e sottotitoli</li>
@@ -156,8 +160,11 @@
               <li>Global search and favorites</li>
               <li>Native HLS playback with configurable streaming quality</li>
               <li>Playback progress synchronization and watched-state handling</li>
-              <li>Authenticated downloads for movies and episodes</li>
-              <li>Downloads screen with transfer progress and local storage controls</li>
+              <li>Authenticated downloads for movies, episodes and whole seasons</li>
+              <li>Persistent FIFO queue with one active transfer at a time</li>
+              <li>Background downloads restored after an app relaunch</li>
+              <li>One completion summary notification for each season batch</li>
+              <li>Downloads screen with queue state, transfer progress and local storage controls</li>
               <li>Offline resume and watched-state tracking</li>
               <li>Explicit online sync with conservative conflict handling</li>
               <li>Audio-track and subtitle selection</li>
@@ -169,23 +176,23 @@
       <article class="item">
         <div class="project-head">
           <span class="project-index">03</span>
-          <h2>Riproduzione offline e sync sicura / Offline playback and safe sync</h2>
-          <span class="repo-link">0.7.3</span>
+          <h2>Download in background e sync sicura / Background downloads and safe sync</h2>
+          <span class="repo-link">0.7.4</span>
         </div>
         <div class="project-copy">
           <p>
             <span class="language-label">Italiano</span>
-            Scarica un film o un episodio dalla schermata dei dettagli, riproducilo senza rete,
-            riprendi dal punto salvato e gestisci i contenuti dalla sezione Scaricati. Le modifiche
-            restano in coda per lo stesso server e utente Jellyfin e vengono sincronizzate quando il
-            dispositivo torna online, preservando gli elementi completati e l'avanzamento server già superiore.
+            Film, episodi e stagioni entrano in una coda FIFO persistente con un solo trasferimento
+            attivo. I download continuano mentre NineFin è sospesa e vengono ripristinati dopo il
+            riavvio dell'app; una stagione produce una sola notifica riepilogativa finale. I contenuti
+            restano riproducibili offline e l'avanzamento viene sincronizzato in sicurezza al ritorno online.
           </p>
           <p>
             <span class="language-label">English</span>
-            Download a movie or episode from its detail screen, play it without a network connection,
-            resume locally and manage saved media from Downloads. Changes remain queued for the same
-            Jellyfin server and user, then synchronize on reconnect while preserving completed items and
-            server progress that is already ahead.
+            Movies, episodes and seasons enter a persistent FIFO queue with one active transfer at a
+            time. Downloads continue while NineFin is suspended and are restored after an app relaunch;
+            a season produces one final summary notification. Saved media remains available offline and
+            playback progress synchronizes safely when the device reconnects.
           </p>
         </div>
       </article>
@@ -213,7 +220,8 @@
         </div>
 
         <div class="profile-terminal">
-          <div><span class="terminal-key">current_release</span><span class="terminal-equals">=</span><span class="terminal-value">0.7.3</span></div>
+          <div><span class="terminal-key">current_release</span><span class="terminal-equals">=</span><span class="terminal-value">0.7.4</span></div>
+          <div><span class="terminal-key">build</span><span class="terminal-equals">=</span><span class="terminal-value">15</span></div>
           <div><span class="terminal-key">bundle_id</span><span class="terminal-equals">=</span><span class="terminal-value">dev.luke.ninefin</span></div>
           <div><span class="terminal-key">deployment_target</span><span class="terminal-equals">=</span><span class="terminal-value">iOS 9.0</span></div>
           <div><span class="terminal-key">architecture</span><span class="terminal-equals">=</span><span class="terminal-value">armv7</span></div>
