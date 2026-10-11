@@ -27,7 +27,7 @@
     "name": "NineFin",
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "iOS 9",
-    "softwareVersion": "0.7.4",
+    "softwareVersion": "0.7.5",
     "description": "Native Jellyfin client for legacy iOS 9 devices with persistent background downloads, offline playback and progress synchronization.",
     "url": "https://lukelefox.github.io/NineFin/",
     "downloadUrl": "https://github.com/LukeLeFox/NineFin/releases/latest",
@@ -67,7 +67,7 @@
     <section class="disclosure project-summary" aria-labelledby="ninefin-status">
       <div class="disclosure-title" id="ninefin-status">
         <span class="status-dot" aria-hidden="true"></span>
-        NineFin 0.7.4 · release corrente / current release · background downloads
+        NineFin 0.7.5 · release corrente / current release · affidabilità / reliability
       </div>
 
       <div class="language-grid">
@@ -147,7 +147,9 @@
               <li>Schermata Scaricati con stato della coda, avanzamento e gestione dello spazio locale</li>
               <li>Ripresa e stato visto registrati anche offline</li>
               <li>Sincronizzazione esplicita con gestione conservativa dei conflitti</li>
-              <li>Selezione di tracce audio e sottotitoli</li>
+              <li>Selezione di tracce audio e sottotitoli, sottotitoli disattivati di default</li>
+              <li>Download ripresi dopo errori di rete o chiusura forzata dell'app</li>
+              <li>Video esclusi dal backup iCloud/iTunes</li>
             </ul>
           </div>
           <div class="language-block">
@@ -167,7 +169,9 @@
               <li>Downloads screen with queue state, transfer progress and local storage controls</li>
               <li>Offline resume and watched-state tracking</li>
               <li>Explicit online sync with conservative conflict handling</li>
-              <li>Audio-track and subtitle selection</li>
+              <li>Audio-track and subtitle selection, subtitles off by default</li>
+              <li>Downloads resumed after network errors or a force-quit</li>
+              <li>Downloaded media excluded from iCloud/iTunes backups</li>
             </ul>
           </div>
         </div>
@@ -176,8 +180,35 @@
       <article class="item">
         <div class="project-head">
           <span class="project-index">03</span>
+          <h2>Novità della 0.7.5 / What's new in 0.7.5</h2>
+          <span class="repo-link">0.7.5</span>
+        </div>
+        <div class="project-copy">
+          <p>
+            <span class="language-label">Italiano</span>
+            Una release di affidabilità. Inizio e avanzamento della riproduzione arrivano di nuovo ai
+            server Jellyfin recenti, quindi Continua a guardare segue quello che guardi in NineFin. I
+            download interrotti da errori di rete o dalla chiusura forzata dell'app riprendono dalla
+            stessa posizione in coda, l'avanzamento offline non si perde più eliminando o riscaricando un
+            file, l'audio si sente anche con l'interruttore silenzioso e le librerie non si fermano più a
+            200 titoli.
+          </p>
+          <p>
+            <span class="language-label">English</span>
+            A reliability release. Playback start and progress reach recent Jellyfin servers again, so
+            Continue Watching follows what you watch in NineFin. Downloads interrupted by network errors
+            or a force-quit resume in the same queue position, offline progress is no longer lost when a
+            file is deleted or re-downloaded, sound plays even with the silent switch on, and libraries no
+            longer stop at 200 titles.
+          </p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">04</span>
           <h2>Download in background e sync sicura / Background downloads and safe sync</h2>
-          <span class="repo-link">0.7.4</span>
+          <span class="repo-link">0.7.4+</span>
         </div>
         <div class="project-copy">
           <p>
@@ -199,7 +230,7 @@
 
       <article class="item">
         <div class="project-head">
-          <span class="project-index">04</span>
+          <span class="project-index">05</span>
           <h2>Scarica l'IPA precompilata / Download prebuilt IPA</h2>
           <span class="repo-link">GitHub Releases</span>
         </div>
@@ -220,8 +251,8 @@
         </div>
 
         <div class="profile-terminal">
-          <div><span class="terminal-key">current_release</span><span class="terminal-equals">=</span><span class="terminal-value">0.7.4</span></div>
-          <div><span class="terminal-key">build</span><span class="terminal-equals">=</span><span class="terminal-value">15</span></div>
+          <div><span class="terminal-key">current_release</span><span class="terminal-equals">=</span><span class="terminal-value">0.7.5</span></div>
+          <div><span class="terminal-key">build</span><span class="terminal-equals">=</span><span class="terminal-value">16</span></div>
           <div><span class="terminal-key">bundle_id</span><span class="terminal-equals">=</span><span class="terminal-value">dev.luke.ninefin</span></div>
           <div><span class="terminal-key">deployment_target</span><span class="terminal-equals">=</span><span class="terminal-value">iOS 9.0</span></div>
           <div><span class="terminal-key">architecture</span><span class="terminal-equals">=</span><span class="terminal-value">armv7</span></div>
@@ -231,7 +262,7 @@
 
       <article class="item">
         <div class="project-head">
-          <span class="project-index">05</span>
+          <span class="project-index">06</span>
           <h2>Compila dai sorgenti / Build from source</h2>
           <span class="repo-link">Theos</span>
         </div>
