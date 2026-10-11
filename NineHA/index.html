@@ -11,12 +11,12 @@
   <link rel="stylesheet" href="../assets/css/style.css?v=17" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="NineHA — Home Assistant client for legacy iOS 9" />
-  <meta property="og:description" content="NineHA 0.8.1 is a native Home Assistant client for legacy iOS 9 devices with a dashboard modelled on the official app, username and password login and live updates." />
+  <meta property="og:description" content="NineHA 0.9.0 is a native Home Assistant client for legacy iOS 9 devices with a dashboard modelled on the official app, username and password login and live updates." />
   <meta property="og:url" content="https://lukelefox.github.io/NineHA/" />
   <meta property="og:image" content="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-home.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="NineHA — Home Assistant client for legacy iOS 9" />
-  <meta name="twitter:description" content="NineHA 0.8.1 brings a native dashboard modelled on the official Home Assistant app to legacy iOS 9 devices." />
+  <meta name="twitter:description" content="NineHA 0.9.0 brings a native dashboard modelled on the official Home Assistant app to legacy iOS 9 devices." />
 </head>
 <body>
   <div class="container">
@@ -41,7 +41,7 @@
     <section class="disclosure project-summary" aria-labelledby="NineHA-status">
       <div class="disclosure-title" id="NineHA-status">
         <span class="status-dot" aria-hidden="true"></span>
-        v0.8.1 build 49 · sperimentale / experimental
+        v0.9.0 build 50 · sperimentale / experimental
       </div>
       <div class="language-grid">
         <div class="language-block">
@@ -93,6 +93,7 @@
               <li>Dashboard nativa in stile app ufficiale: tema scuro, badge, schede per stanza e tile card</li>
               <li>Pannello dettagli con slider di luminosità, interruttori, tapparelle, termostato e media</li>
               <li>Dashboard personalizzate con sezioni ed entità scelte, anche come schermata iniziale</li>
+              <li>Importazione di una vista Lovelace e sezioni meteo con previsioni, orologio e griglia valori</li>
               <li>Controlli per aspirapolvere e telecomando per Android TV / Fire TV</li>
               <li>Icone Material Design Icons, le stesse del frontend Home Assistant</li>
               <li>Accesso con utente e password (anche con verifica in due passaggi), token oppure OAuth</li>
@@ -107,6 +108,7 @@
               <li>Native dashboard modelled on the official app: dark theme, badges, area tabs and tile cards</li>
               <li>Details panel with brightness slider, toggles, covers, thermostat and media controls</li>
               <li>Custom dashboards with chosen sections and entities, optionally shown at launch</li>
+              <li>Lovelace view import plus weather forecast, clock and value-grid sections</li>
               <li>Vacuum controls and a remote for Android TV / Fire TV</li>
               <li>Material Design Icons, the same icons used by the Home Assistant frontend</li>
               <li>Username and password login (including two-factor), long-lived token or OAuth</li>
@@ -122,7 +124,7 @@
         <div class="project-head">
           <span class="project-index">02</span>
           <h2>IPA ARMv7 precompilata / Prebuilt ARMv7 IPA</h2>
-          <span class="repo-link">0.8.1 · build 49</span>
+          <span class="repo-link">0.9.0 · build 50</span>
         </div>
         <div class="project-copy"><p><span class="language-label">Italiano</span> Una IPA ARMv7 precompilata viene pubblicata con la release per i dispositivi legacy compatibili e aggiorna le installazioni esistenti. Lo sviluppo è stato collaudato su iPad mini di prima generazione e iPhone 4S.</p><p><span class="language-label">English</span> A precompiled ARMv7 IPA is published with each release for compatible legacy devices and upgrades existing installs. Development has been tested on a first-generation iPad mini and iPhone 4S.</p></div>
       </article>
@@ -147,6 +149,17 @@
           <p><span class="language-label">English</span> Login uses Home Assistant's documented login flow, with two-factor support. The password is never stored: only the refresh token is kept in the iOS Keychain and can be revoked at any time from the Home Assistant profile. HTTPS or a VPN is recommended when possible.</p>
         </div>
       </article>
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">05</span>
+          <h2>Dashboard personalizzate / Custom dashboards</h2>
+          <span class="repo-link">0.9.0</span>
+        </div>
+        <div class="project-copy">
+          <p><span class="language-label">Italiano</span> Dal menu laterale si creano dashboard vuote oppure importate da una vista Lovelace: entities, griglie di sensori, meteo e orologio diventano sezioni native, con i loro nomi personalizzati. Le dashboard restano salvate solo sul dispositivo: l'importazione legge la configurazione ma non scrive mai nulla sull'istanza Home Assistant, e si eliminano dall'editor.</p>
+          <p><span class="language-label">English</span> From the sidebar you can create empty dashboards or import a Lovelace view: entities cards, sensor grids, weather and clock become native sections with their custom names. Dashboards are stored only on the device: the import reads the configuration but never writes anything to the Home Assistant instance, and dashboards can be deleted from the editor.</p>
+        </div>
+      </article>
     </main>
 
     <div class="section-title"><span>02</span> Schermate / Screenshots</div>
@@ -163,6 +176,10 @@
       <a class="screenshot-card" href="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-custom-dashboard.png" target="_blank" rel="noopener">
         <img src="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-custom-dashboard.png" alt="NineHA: dashboard personalizzata" loading="lazy" decoding="async" />
         <span>Dashboard personalizzata / Custom dashboard</span>
+      </a>
+      <a class="screenshot-card" href="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-cards.png" target="_blank" rel="noopener">
+        <img src="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-cards.png" alt="NineHA: meteo, orologio e griglia valori" loading="lazy" decoding="async" />
+        <span>Meteo, orologio e griglia / Weather, clock and grid</span>
       </a>
       <a class="screenshot-card" href="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-dashboard-editor.png" target="_blank" rel="noopener">
         <img src="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-dashboard-editor.png" alt="NineHA: editor della dashboard" loading="lazy" decoding="async" />
