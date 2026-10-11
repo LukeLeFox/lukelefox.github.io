@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NineGuard — Client WireGuard per iOS 9 / WireGuard client for iOS 9</title>
+  <meta name="description" content="NineGuard è un client WireGuard per iPad e iPhone jailbroken con iOS 9 e ARMv7, senza NetworkExtension: app, daemon root e wireguard-go su utun, con full tunnel, DNS e watchdog del cambio rete." />
+  <meta name="keywords" content="NineGuard, WireGuard, iOS 9, VPN, jailbreak, iPad mini, wireguard-go, utun, legacy iOS, ARMv7, old iPad, Theos" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://lukelefox.github.io/NineGuard/" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=17" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NineGuard — WireGuard client for legacy iOS 9" />
+  <meta property="og:description" content="WireGuard client for jailbroken iOS 9 / ARMv7 devices without NetworkExtension: app, root daemon and wireguard-go on utun." />
+  <meta property="og:url" content="https://lukelefox.github.io/NineGuard/" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/LukeLeFox/NineGuard/main/Resources/Icon-152.png" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="NineGuard — WireGuard client for legacy iOS 9" />
+  <meta name="twitter:description" content="WireGuard client for jailbroken iOS 9 / ARMv7 with full tunnel, DNS and network-change watchdog." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "NineGuard",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "iOS 9",
+    "softwareVersion": "0.3.2",
+    "description": "WireGuard client for jailbroken iOS 9 / ARMv7 devices without NetworkExtension, built from an app, a root launchd daemon and wireguard-go on utun.",
+    "url": "https://lukelefox.github.io/NineGuard/",
+    "downloadUrl": "https://github.com/LukeLeFox/NineGuard/releases/latest",
+    "codeRepository": "https://github.com/LukeLeFox/NineGuard",
+    "license": "https://opensource.org/license/mit",
+    "author": {
+      "@type": "Person",
+      "name": "LukeLeFox"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+
+    <header class="topbar">
+      <div class="brand">
+        <img
+          src="https://raw.githubusercontent.com/LukeLeFox/NineGuard/main/Resources/Icon-152.png"
+          alt="NineGuard app icon"
+          class="project-app-icon"
+        />
+
+        <div class="brand-text">
+          <div class="eyebrow">~/lukelefox/NineGuard</div>
+          <h1>NineGuard</h1>
+          <p><span class="prompt" aria-hidden="true">$</span> client WireGuard / WireGuard client · iOS 9 legacy · jailbreak · ARMv7</p>
+        </div>
+      </div>
+
+      <nav class="topnav" aria-label="NineGuard navigation">
+        <a class="nav-button" href="../"><span aria-hidden="true">./</span>home <small>Tech Diary</small></a>
+      </nav>
+    </header>
+
+    <section class="disclosure project-summary" aria-labelledby="nineguard-status">
+      <div class="disclosure-title" id="nineguard-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        NineGuard 0.3.2 · release corrente / current release · full tunnel + DNS
+      </div>
+
+      <div class="language-grid">
+        <div class="language-block">
+          <span class="language-label">Italiano</span>
+          <p>NineGuard porta WireGuard sui vecchi iPad e iPhone con iOS 9 jailbroken. Con il jailbreak le estensioni NetworkExtension non funzionano, quindi NineGuard le evita del tutto: un'app per profili e controlli, un daemon root avviato da launchd e il motore wireguard-go collegato direttamente a un'interfaccia utun.</p>
+        </div>
+        <div class="language-block">
+          <span class="language-label">English</span>
+          <p>NineGuard brings WireGuard to older jailbroken iPads and iPhones running iOS 9. NetworkExtension extensions do not work under the jailbreak, so NineGuard avoids them entirely: an app for profiles and controls, a root launchd daemon and the wireguard-go engine attached directly to a utun interface.</p>
+        </div>
+      </div>
+
+      <div class="project-badges" aria-label="Compatibility">
+        <span class="project-badge">iOS 9</span>
+        <span class="project-badge">ARMv7</span>
+        <span class="project-badge">Jailbreak</span>
+        <span class="project-badge">WireGuard</span>
+        <span class="project-badge">Objective-C</span>
+        <span class="project-badge">C</span>
+        <span class="project-badge">Theos</span>
+        <span class="project-badge">MIT</span>
+      </div>
+
+      <div class="project-actions">
+        <a class="nav-button" href="https://github.com/LukeLeFox/NineGuard/releases/latest">
+          <span aria-hidden="true">↓</span>scarica / download <small>IPA + .deb</small>
+        </a>
+        <a class="nav-button" href="https://github.com/LukeLeFox/NineGuard/blob/main/GUIDA.md" target="_blank" rel="noopener">
+          <span aria-hidden="true">./</span>guida / guide <small>GUIDA.md ↗</small>
+        </a>
+        <a class="nav-button" href="https://github.com/LukeLeFox/NineGuard" target="_blank" rel="noopener">
+          <span aria-hidden="true">./</span>sorgente / source <small>GitHub ↗</small>
+        </a>
+      </div>
+    </section>
+
+    <div class="section-title"><span>01</span> Informazioni su NineGuard / About NineGuard</div>
+
+    <main class="list">
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">01</span>
+          <h2>WireGuard senza NetworkExtension / WireGuard without NetworkExtension</h2>
+          <span class="repo-link">iOS 9</span>
+        </div>
+        <div class="project-copy">
+          <p>
+            <span class="language-label">Italiano</span>
+            L'app comunica con il daemon tramite un socket Unix autenticato (HMAC-SHA256 con un segreto nel Keychain condiviso) e gli passa solo l'identificativo del profilo, mai le chiavi. Il daemon legge il profilo dal Keychain, avvia wireguard-go, configura indirizzo, route e DNS e ripristina tutto alla disconnessione o dopo un crash.
+          </p>
+          <p>
+            <span class="language-label">English</span>
+            The app talks to the daemon over an authenticated Unix socket (HMAC-SHA256 with a secret in the shared Keychain) and only sends the profile identifier, never the keys. The daemon reads the profile from the Keychain, starts wireguard-go, configures address, routes and DNS, and restores everything on disconnect or after a crash.
+          </p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">02</span>
+          <h2>Funzioni / Features</h2>
+          <span class="repo-link">app + daemon</span>
+        </div>
+        <div class="language-grid">
+          <div class="language-block">
+            <span class="language-label">Italiano</span>
+            <ul class="project-list">
+              <li>Import del profilo WireGuard da QR, configurazione conservata nel Keychain</li>
+              <li>Connetti e Disconnetti con un tocco</li>
+              <li>Route IPv4 degli AllowedIPs, con la rete locale sempre raggiungibile</li>
+              <li>Full tunnel come wg-quick (0/1 + 128/1) con bypass verso il server VPN</li>
+              <li>DNS del profilo applicati tramite configd e rimossi automaticamente</li>
+              <li>Watchdog del cambio rete: il bypass segue il nuovo gateway Wi-Fi</li>
+              <li>MTU del profilo applicata al tunnel</li>
+              <li>Statistiche ogni 5 secondi: handshake, traffico e stato della rete</li>
+              <li>Ripristino automatico di route e DNS dopo crash del motore o del daemon</li>
+              <li>Verifica dell'IP pubblico dall'app</li>
+            </ul>
+          </div>
+          <div class="language-block">
+            <span class="language-label">English</span>
+            <ul class="project-list">
+              <li>WireGuard profile import from QR codes, configuration stored in the Keychain</li>
+              <li>One-tap Connect and Disconnect</li>
+              <li>IPv4 routes for AllowedIPs, keeping the local network reachable</li>
+              <li>wg-quick-style full tunnel (0/1 + 128/1) with a bypass route to the VPN server</li>
+              <li>Profile DNS applied through configd and removed automatically</li>
+              <li>Network-change watchdog: the bypass follows the new Wi-Fi gateway</li>
+              <li>Profile MTU applied to the tunnel</li>
+              <li>Statistics every 5 seconds: handshake, traffic and network state</li>
+              <li>Automatic route and DNS recovery after engine or daemon crashes</li>
+              <li>Public IP check from the app</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">03</span>
+          <h2>Testato su hardware reale / Tested on real hardware</h2>
+          <span class="repo-link">iPad mini 1</span>
+        </div>
+        <div class="project-copy">
+          <p>
+            <span class="language-label">Italiano</span>
+            Verificato su iPad mini 1 con iOS 9.3.6: profilo reale in full tunnel (l'IP pubblico diventa quello del server VPN), crash simulati di motore e daemon, cambio Wi-Fi da casa a hotspot e ritorno. Limiti noti: in full tunnel l'icona Wi-Fi sparisce dalla barra di stato e l'IPv6 non passa nel tunnel, quindi su reti con IPv6 quel traffico esce fuori dalla VPN.
+          </p>
+          <p>
+            <span class="language-label">English</span>
+            Verified on an iPad mini 1 running iOS 9.3.6: a real profile in full tunnel (the public IP becomes the VPN server's), simulated engine and daemon crashes, and a Wi-Fi switch from home to a hotspot and back. Known limits: in full tunnel the Wi-Fi icon disappears from the status bar, and IPv6 is not routed through the tunnel, so on IPv6 networks that traffic leaves outside the VPN.
+          </p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">04</span>
+          <h2>Scarica i pacchetti / Download the packages</h2>
+          <span class="repo-link">GitHub Releases</span>
+        </div>
+
+        <div class="project-copy">
+          <p>
+            <span class="language-label">Italiano</span>
+            Ogni release contiene l'IPA dell'app e il pacchetto .deb del companion (daemon + wireguard-go). Sull'iPad servono jailbreak, OpenSSH, AppSync Unified e IPA Installer Console: installa prima il .deb con dpkg, poi l'IPA. Passaggi completi nella
+            <a class="project-link" href="https://github.com/LukeLeFox/NineGuard/blob/main/GUIDA.md" target="_blank" rel="noopener">guida ↗</a>.
+          </p>
+          <p>
+            <span class="language-label">English</span>
+            Each release contains the app IPA and the companion .deb package (daemon + wireguard-go). The device needs a jailbreak, OpenSSH, AppSync Unified and IPA Installer Console: install the .deb with dpkg first, then the IPA. Full steps are in the
+            <a class="project-link" href="https://github.com/LukeLeFox/NineGuard/blob/main/GUIDA.md" target="_blank" rel="noopener">guide (Italian) ↗</a>.
+          </p>
+        </div>
+
+        <div class="profile-terminal">
+          <div><span class="terminal-key">current_release</span><span class="terminal-equals">=</span><span class="terminal-value">0.3.2</span></div>
+          <div><span class="terminal-key">app_build</span><span class="terminal-equals">=</span><span class="terminal-value">17</span></div>
+          <div><span class="terminal-key">bundle_id</span><span class="terminal-equals">=</span><span class="terminal-value">dev.luke.nineguard</span></div>
+          <div><span class="terminal-key">companion</span><span class="terminal-equals">=</span><span class="terminal-value">dev.luke.nineguard.daemon</span></div>
+          <div><span class="terminal-key">engine</span><span class="terminal-equals">=</span><span class="terminal-value">wireguard-go 0.0.20200320</span></div>
+          <div><span class="terminal-key">deployment_target</span><span class="terminal-equals">=</span><span class="terminal-value">iOS 9.0</span></div>
+          <div><span class="terminal-key">architecture</span><span class="terminal-equals">=</span><span class="terminal-value">armv7</span></div>
+          <div><span class="terminal-key">package</span><span class="terminal-equals">=</span><span class="terminal-value">IPA + .deb</span></div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">05</span>
+          <h2>Compila dai sorgenti / Build from source</h2>
+          <span class="repo-link">Theos + Go 1.14</span>
+        </div>
+
+        <div class="profile-terminal">
+          <div><span class="terminal-key">$</span><span class="terminal-equals"></span><span class="terminal-value">make engine</span></div>
+          <div><span class="terminal-key">$</span><span class="terminal-equals"></span><span class="terminal-value">make -C DaemonPackage clean package</span></div>
+          <div><span class="terminal-key">$</span><span class="terminal-equals"></span><span class="terminal-value">make clean &amp;&amp; make -j2 stage</span></div>
+        </div>
+
+        <div class="project-copy">
+          <p><span class="language-label">Italiano</span> Richiede Theos con SDK iOS 9.2 e Go 1.14.15 per compilare wireguard-go a 32 bit. Il progetto mantiene intenzionalmente le impostazioni legacy; cambiare SDK, deployment target o architettura può compromettere la compatibilità.</p>
+          <p><span class="language-label">English</span> Requires Theos with an iOS 9.2 SDK and Go 1.14.15 to build 32-bit wireguard-go. The project intentionally keeps its legacy settings; changing the target SDK, deployment target or architecture may break compatibility.</p>
+        </div>
+      </article>
+    </main>
+
+    <div class="section-title"><span>02</span> Collegamenti del progetto / Project links</div>
+
+    <section class="about-grid">
+      <div class="about-card">
+        <span class="language-label">Italiano</span>
+        <p>
+          Consulta i sorgenti, la licenza MIT e la guida completa su
+          <a class="project-link" href="https://github.com/LukeLeFox/NineGuard" target="_blank" rel="noopener">GitHub ↗</a>,
+          oppure scarica IPA e companion da
+          <a class="project-link" href="https://github.com/LukeLeFox/NineGuard/releases/latest">GitHub Releases ↗</a>.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <span class="language-label">English</span>
+        <p>
+          Browse the source code, MIT license and full guide on
+          <a class="project-link" href="https://github.com/LukeLeFox/NineGuard" target="_blank" rel="noopener">GitHub ↗</a>,
+          or download the IPA and companion from
+          <a class="project-link" href="https://github.com/LukeLeFox/NineGuard/releases/latest">GitHub Releases ↗</a>.
+        </p>
+      </div>
+    </section>
+
+    <div class="section-title"><span>03</span> Schermate / Screenshots</div>
+
+    <section class="screenshot-gallery" aria-label="Schermate NineGuard / NineGuard screenshots">
+      <a class="screenshot-card" href="https://raw.githubusercontent.com/LukeLeFox/NineGuard/main/docs/screenshots/nineguard-home.png" target="_blank" rel="noopener">
+        <img src="https://raw.githubusercontent.com/LukeLeFox/NineGuard/main/docs/screenshots/nineguard-home.png" alt="NineGuard: tunnel connesso con statistiche di handshake e traffico" loading="lazy" decoding="async" />
+        <span>Tunnel connesso con statistiche / Connected tunnel with statistics</span>
+      </a>
+    </section>
+
+    <footer class="footer">
+      <span class="prompt" aria-hidden="true">$</span>
+      NineGuard è un progetto indipendente e non è affiliato né approvato da WireGuard. "WireGuard" è un marchio registrato di Jason A. Donenfeld. / NineGuard is an independent project and is not affiliated with or endorsed by WireGuard. "WireGuard" is a registered trademark of Jason A. Donenfeld.
+    </footer>
+
+  </div>
+</body>
+</html>
