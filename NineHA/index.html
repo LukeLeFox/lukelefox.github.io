@@ -11,12 +11,12 @@
   <link rel="stylesheet" href="../assets/css/style.css?v=17" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="NineHA — Home Assistant client for legacy iOS 9" />
-  <meta property="og:description" content="NineHA 0.8.0 is a native Home Assistant client for legacy iOS 9 devices with a dashboard modelled on the official app, username and password login and live updates." />
+  <meta property="og:description" content="NineHA 0.8.1 is a native Home Assistant client for legacy iOS 9 devices with a dashboard modelled on the official app, username and password login and live updates." />
   <meta property="og:url" content="https://lukelefox.github.io/NineHA/" />
   <meta property="og:image" content="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-home.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="NineHA — Home Assistant client for legacy iOS 9" />
-  <meta name="twitter:description" content="NineHA 0.8.0 brings a native dashboard modelled on the official Home Assistant app to legacy iOS 9 devices." />
+  <meta name="twitter:description" content="NineHA 0.8.1 brings a native dashboard modelled on the official Home Assistant app to legacy iOS 9 devices." />
 </head>
 <body>
   <div class="container">
@@ -41,7 +41,7 @@
     <section class="disclosure project-summary" aria-labelledby="NineHA-status">
       <div class="disclosure-title" id="NineHA-status">
         <span class="status-dot" aria-hidden="true"></span>
-        v0.8.0 build 48 · sperimentale / experimental
+        v0.8.1 build 49 · sperimentale / experimental
       </div>
       <div class="language-grid">
         <div class="language-block">
@@ -51,6 +51,16 @@
         <div class="language-block">
           <span class="language-label">English</span>
           <p>NineHA brings a native Home Assistant experience to devices stuck on iOS 9: a dashboard modelled on the official app with areas, tile cards and a details panel, username and password login, live updates and automatic rotation.</p>
+        </div>
+      </div>
+      <div class="language-grid">
+        <div class="language-block">
+          <span class="language-label">Un'alternativa da conoscere</span>
+          <p>Quando ho iniziato NineHA non conoscevo l'esistenza di <a class="project-link" href="https://ha-dashboard.github.io/ios-app/" target="_blank" rel="noopener">HA Dashboard ↗</a>. Invito chiunque a valutarla come alternativa molto valida, perché è molto più compatibile con altre versioni di iOS.</p>
+        </div>
+        <div class="language-block">
+          <span class="language-label">An alternative worth knowing</span>
+          <p>When I started NineHA I didn't know <a class="project-link" href="https://ha-dashboard.github.io/ios-app/" target="_blank" rel="noopener">HA Dashboard ↗</a> existed. I invite everyone to consider it as a very solid alternative, as it is far more compatible with other iOS versions.</p>
         </div>
       </div>
       <div class="project-badges" aria-label="Project technologies">
@@ -82,6 +92,8 @@
             <ul class="project-list">
               <li>Dashboard nativa in stile app ufficiale: tema scuro, badge, schede per stanza e tile card</li>
               <li>Pannello dettagli con slider di luminosità, interruttori, tapparelle, termostato e media</li>
+              <li>Dashboard personalizzate con sezioni ed entità scelte, anche come schermata iniziale</li>
+              <li>Controlli per aspirapolvere e telecomando per Android TV / Fire TV</li>
               <li>Icone Material Design Icons, le stesse del frontend Home Assistant</li>
               <li>Accesso con utente e password (anche con verifica in due passaggi), token oppure OAuth</li>
               <li>Aggiornamenti live tramite WebSocket con fallback REST</li>
@@ -94,6 +106,8 @@
             <ul class="project-list">
               <li>Native dashboard modelled on the official app: dark theme, badges, area tabs and tile cards</li>
               <li>Details panel with brightness slider, toggles, covers, thermostat and media controls</li>
+              <li>Custom dashboards with chosen sections and entities, optionally shown at launch</li>
+              <li>Vacuum controls and a remote for Android TV / Fire TV</li>
               <li>Material Design Icons, the same icons used by the Home Assistant frontend</li>
               <li>Username and password login (including two-factor), long-lived token or OAuth</li>
               <li>Live updates over WebSocket with REST fallback</li>
@@ -108,7 +122,7 @@
         <div class="project-head">
           <span class="project-index">02</span>
           <h2>IPA ARMv7 precompilata / Prebuilt ARMv7 IPA</h2>
-          <span class="repo-link">0.8.0 · build 48</span>
+          <span class="repo-link">0.8.1 · build 49</span>
         </div>
         <div class="project-copy"><p><span class="language-label">Italiano</span> Una IPA ARMv7 precompilata viene pubblicata con la release per i dispositivi legacy compatibili e aggiorna le installazioni esistenti. Lo sviluppo è stato collaudato su iPad mini di prima generazione e iPhone 4S.</p><p><span class="language-label">English</span> A precompiled ARMv7 IPA is published with each release for compatible legacy devices and upgrades existing installs. Development has been tested on a first-generation iPad mini and iPhone 4S.</p></div>
       </article>
@@ -145,6 +159,22 @@
       <a class="screenshot-card" href="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-room.png" target="_blank" rel="noopener">
         <img src="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-room.png" alt="NineHA: scheda stanza" loading="lazy" decoding="async" />
         <span>Scheda stanza / Area tab</span>
+      </a>
+      <a class="screenshot-card" href="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-custom-dashboard.png" target="_blank" rel="noopener">
+        <img src="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-custom-dashboard.png" alt="NineHA: dashboard personalizzata" loading="lazy" decoding="async" />
+        <span>Dashboard personalizzata / Custom dashboard</span>
+      </a>
+      <a class="screenshot-card" href="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-dashboard-editor.png" target="_blank" rel="noopener">
+        <img src="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-dashboard-editor.png" alt="NineHA: editor della dashboard" loading="lazy" decoding="async" />
+        <span>Editor della dashboard / Dashboard editor</span>
+      </a>
+      <a class="screenshot-card" href="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-vacuum.png" target="_blank" rel="noopener">
+        <img src="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-vacuum.png" alt="NineHA: aspirapolvere" loading="lazy" decoding="async" />
+        <span>Aspirapolvere / Vacuum</span>
+      </a>
+      <a class="screenshot-card" href="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-tv-remote.png" target="_blank" rel="noopener">
+        <img src="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-tv-remote.png" alt="NineHA: telecomando tv" loading="lazy" decoding="async" />
+        <span>Telecomando TV / TV remote</span>
       </a>
       <a class="screenshot-card" href="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-light.png" target="_blank" rel="noopener">
         <img src="https://raw.githubusercontent.com/LukeLeFox/NineHA/main/docs/screenshots/nineha-light.png" alt="NineHA: luminosità" loading="lazy" decoding="async" />
