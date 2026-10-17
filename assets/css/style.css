@@ -338,6 +338,35 @@ a:focus-visible{
   vertical-align:1px;
 }
 
+.quote{
+  margin:18px 0 0;
+  padding:18px 20px;
+  border:1px solid var(--line);
+  border-left:3px solid var(--green);
+  border-radius:var(--radius);
+  background:
+    linear-gradient(135deg, var(--green-soft), transparent 60%),
+    var(--panel);
+}
+
+.quote blockquote{
+  margin:0;
+}
+
+.quote blockquote p{
+  margin:0;
+  color:var(--text);
+  font-size:16px;
+  font-style:italic;
+}
+
+.quote figcaption{
+  margin-top:10px;
+  color:#aff5b4;
+  font-size:12px;
+  font-weight:700;
+}
+
 .footer{
   margin-top:28px;
   color:var(--muted);
