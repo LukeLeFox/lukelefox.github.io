@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BuffaloTricks — Fix per NAS Buffalo / Buffalo NAS fixes</title>
+  <meta name="description" content="BuffaloTricks raccoglie fix persistenti per NAS Buffalo LinkStation LS-WX / CloudStation CS-WX. BuffaloTricks collects persistent fixes for Buffalo LinkStation LS-WX / CloudStation CS-WX NAS units." />
+  <meta name="keywords" content="Buffalo NAS, LinkStation LS-WX, CloudStation CS-WX, Samba 4, SMB3, NAS Navigator, Auto Power, Proxmox LXC, Pogoplug, Buildroot, uClibc, ARMv5" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://lukelefox.github.io/BuffaloTricks/" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=16" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BuffaloTricks — persistent fixes for old Buffalo NAS units" />
+  <meta property="og:description" content="Fixes for Buffalo LS-WX / CS-WX: clock stuck in 2036, blocked standby, NAS Navigator replaced by an LXC container and Samba 4.23 with SMB3 instead of the stock SMB1 server." />
+  <meta property="og:url" content="https://lukelefox.github.io/BuffaloTricks/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="BuffaloTricks — persistent fixes for old Buffalo NAS units" />
+  <meta name="twitter:description" content="Fixes for Buffalo LS-WX / CS-WX: clock stuck in 2036, blocked standby, NAS Navigator replaced by an LXC container and Samba 4.23 with SMB3 instead of the stock SMB1 server." />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <div class="project-mark" aria-hidden="true">BT</div>
+        <div class="brand-text">
+          <div class="eyebrow">~/lukelefox/BuffaloTricks</div>
+          <h1>BuffaloTricks</h1>
+          <p><span class="prompt" aria-hidden="true">$</span> Buffalo LS-WX / CS-WX · BusyBox · fix persistenti / persistent fixes</p>
+        </div>
+      </div>
+      <nav class="topnav" aria-label="BuffaloTricks navigation">
+        <a class="nav-button" href="../"><span aria-hidden="true">./</span>home <small>Tech Diary</small></a>
+      </nav>
+    </header>
+
+    <section class="disclosure project-summary" aria-labelledby="BuffaloTricks-status">
+      <div class="disclosure-title" id="BuffaloTricks-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        in uso / in use · testato su CS-WX / tested on CS-WX
+      </div>
+      <div class="language-grid">
+        <div class="language-block">
+          <span class="language-label">Italiano</span>
+          <p>Fix persistenti per un vecchio NAS Buffalo (firmware 1.13, kernel 2.6.31, BusyBox 1.7): orologio bloccato al 2036, standby che non parte, NAS Navigator senza VM Windows e Samba 4 con SMB3 al posto dello smbd stock in SMB1.</p>
+        </div>
+        <div class="language-block">
+          <span class="language-label">English</span>
+          <p>Persistent fixes for an old Buffalo NAS (firmware 1.13, kernel 2.6.31, BusyBox 1.7): clock stuck in 2036, standby that never completes, NAS Navigator without a Windows VM and Samba 4 with SMB3 instead of the stock SMB1 smbd.</p>
+        </div>
+      </div>
+      <div class="project-badges" aria-label="Project technologies">
+        <span class="project-badge">Buffalo NAS</span>
+        <span class="project-badge">BusyBox</span>
+        <span class="project-badge">Samba 4.23</span>
+        <span class="project-badge">SMB3</span>
+        <span class="project-badge">Buildroot</span>
+        <span class="project-badge">Proxmox LXC</span>
+      </div>
+      <div class="project-actions">
+        <a class="nav-button" href="https://github.com/LukeLeFox/BuffaloTricks" target="_blank" rel="noopener"><span aria-hidden="true">./</span>sorgente / source <small>GitHub ↗</small></a>
+        <a class="nav-button" href="https://github.com/LukeLeFox/BuffaloTricks/blob/main/samba4/README.md" target="_blank" rel="noopener"><span aria-hidden="true">./</span>guida SMB3 / SMB3 guide <small>README ↗</small></a>
+      </div>
+    </section>
+
+    <div class="section-title"><span>01</span> Panoramica / Project overview</div>
+
+    <main class="list">
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">01</span>
+          <h2>Problemi risolti / What it fixes</h2>
+          <span class="repo-link">4 fix</span>
+        </div>
+        <div class="language-grid">
+          <div class="language-block">
+            <span class="language-label">Italiano</span>
+            <ul class="project-list">
+              <li>Cloud Pogoplug (chiuso) disattivato senza far ripartire i demoni ogni minuto</li>
+              <li>Orologio riportato al giorno giusto dopo ogni boot e ogni risveglio</li>
+              <li>Standby e spegnimento non più bloccati per ore</li>
+              <li>Auto Power comandato da un container LXC invece che da una VM Windows</li>
+              <li>Condivisioni SMB2/SMB3 con login, al posto di SMB1 in guest</li>
+            </ul>
+          </div>
+          <div class="language-block">
+            <span class="language-label">English</span>
+            <ul class="project-list">
+              <li>Defunct Pogoplug cloud disabled without daemons respawning every minute</li>
+              <li>Clock back to the right date after every boot and wake-up</li>
+              <li>Standby and shutdown no longer stuck for hours</li>
+              <li>Auto Power driven by an LXC container instead of a Windows VM</li>
+              <li>SMB2/SMB3 shares with login, instead of guest SMB1</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">02</span>
+          <h2>Hardware testato / Tested hardware</h2>
+          <span class="repo-link">ARMv5</span>
+        </div>
+        <div class="profile-terminal">
+          <div><span class="terminal-key">model</span><span class="terminal-equals">=</span><span class="terminal-value">Buffalo LinkStation LS-WX20 / CloudStation CS-WX</span></div>
+          <div><span class="terminal-key">soc</span><span class="terminal-equals">=</span><span class="terminal-value">Marvell 88F6281 Kirkwood, 128 MB RAM</span></div>
+          <div><span class="terminal-key">firmware</span><span class="terminal-equals">=</span><span class="terminal-value">1.13 build 2.35</span></div>
+          <div><span class="terminal-key">kernel</span><span class="terminal-equals">=</span><span class="terminal-value">2.6.31.8</span></div>
+          <div><span class="terminal-key">userland</span><span class="terminal-equals">=</span><span class="terminal-value">BusyBox 1.7, OpenSSH 3.7.1</span></div>
+          <div><span class="terminal-key">auto_power</span><span class="terminal-equals">=</span><span class="terminal-value">Proxmox LXC + Home Assistant</span></div>
+        </div>
+        <div class="project-copy"><p><span class="language-label">Italiano</span> Il firmware rigenera parte del sistema a ogni avvio: i fix vivono in <code>/etc/melco</code> e ripartono da un hook in <code>/etc/rc.d/extensions.d</code>, eseguito anche a ogni risveglio dallo standby.</p><p><span class="language-label">English</span> The firmware regenerates part of the system at every boot: the fixes live in <code>/etc/melco</code> and are re-applied by a hook in <code>/etc/rc.d/extensions.d</code>, which also runs on every wake-up from standby.</p></div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">03</span>
+          <h2>Orologio al 2036 / Clock stuck in 2036</h2>
+          <span class="repo-link"><a class="project-link" href="https://github.com/LukeLeFox/BuffaloTricks/blob/main/nas/fix-time.sh" target="_blank" rel="noopener">fix-time.sh ↗</a></span>
+        </div>
+        <div class="project-copy"><p><span class="language-label">Italiano</span> Il client cloud Pogoplug contiene un suo client NTP: senza risposta valida imposta il timestamp NTP zero, cioè il 7 febbraio 2036. Il fix neutralizza il lanciatore (il watchdog del firmware resta tranquillo) e sincronizza con <code>ntpdate</code> al boot, ogni ora e subito se l'anno è fuori scala.</p><p><span class="language-label">English</span> The Pogoplug cloud client ships its own NTP client: without a valid reply it sets NTP timestamp zero, i.e. 7 February 2036. The fix neutralises its launcher (keeping the firmware watchdog happy) and syncs with <code>ntpdate</code> at boot, every hour and immediately when the year is out of range.</p></div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">04</span>
+          <h2>Standby bloccato / Stuck standby</h2>
+          <span class="repo-link"><a class="project-link" href="https://github.com/LukeLeFox/BuffaloTricks/blob/main/nas/fix-clientutil-shutdown.sh" target="_blank" rel="noopener">fix-clientutil-shutdown.sh ↗</a></span>
+        </div>
+        <div class="project-copy"><p><span class="language-label">Italiano</span> Uno <code>rm</code> senza <code>-f</code> nello script di stop di NAS Navigator aspettava una conferma dalla console seriale, bloccando standby e spegnimento con il LED che lampeggia per ore. Diventa <code>rm -f</code>, ripatchato a ogni boot.</p><p><span class="language-label">English</span> An <code>rm</code> without <code>-f</code> in the NAS Navigator stop script waited for a confirmation on the serial console, blocking standby and shutdown with the LED blinking for hours. It becomes <code>rm -f</code>, re-patched at every boot.</p></div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">05</span>
+          <h2>NAS Navigator in LXC / NAS Navigator in LXC</h2>
+          <span class="repo-link"><a class="project-link" href="https://github.com/LukeLeFox/BuffaloTricks/tree/main/nas-navigator-ct" target="_blank" rel="noopener">nas-navigator-ct ↗</a></span>
+        </div>
+        <div class="project-copy"><p><span class="language-label">Italiano</span> Con l'interruttore su AUTO il NAS resta acceso finché un client NAS Navigator manda segnali di presenza. Il protocollo, ricavato da catture reali, è un magic packet su UDP/9 (ACTIVE) e la sua versione con zeri (SHUTDOWN), con un lease di 300 s per client. Circa 80 righe di Python in un container Debian da 128 MB sostituiscono la VM Windows: accendere il container sveglia il NAS, spegnerlo lo manda in standby.</p><p><span class="language-label">English</span> With the switch on AUTO the NAS stays on while a NAS Navigator client sends presence signals. The protocol, reverse-engineered from real captures, is a magic packet on UDP/9 (ACTIVE) and its zeroed counterpart (SHUTDOWN), with a 300 s lease per client. About 80 lines of Python in a 128 MB Debian container replace the Windows VM: starting the container wakes the NAS, stopping it sends the NAS to standby.</p></div>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">06</span>
+          <h2>Samba 4 con SMB3 / Samba 4 with SMB3</h2>
+          <span class="repo-link"><a class="project-link" href="https://github.com/LukeLeFox/BuffaloTricks/tree/main/samba4" target="_blank" rel="noopener">samba4 ↗</a></span>
+        </div>
+        <div class="language-grid">
+          <div class="language-block">
+            <span class="language-label">Italiano</span>
+            <ul class="project-list">
+              <li>Samba 4.23.13 compilato con Buildroot, uClibc-ng e header del kernel 2.6.31, installato sull'array dati</li>
+              <li>SMB2/SMB3 con NTLMv2: SMB1 e guest disattivati</li>
+              <li>Utenti, password e share della web UI Buffalo copiati a ogni avvio, con verifica prima di sostituire</li>
+              <li><code>samba-dcerpcd</code> ridotto all'essenziale, per avere l'elenco delle share su una CPU da 1,2 GHz</li>
+              <li>Ritorno allo smbd stock con un solo comando</li>
+            </ul>
+          </div>
+          <div class="language-block">
+            <span class="language-label">English</span>
+            <ul class="project-list">
+              <li>Samba 4.23.13 built with Buildroot, uClibc-ng and 2.6.31 kernel headers, installed on the data array</li>
+              <li>SMB2/SMB3 with NTLMv2: SMB1 and guest disabled</li>
+              <li>Users, passwords and shares from the Buffalo web UI copied at every start, verified before swapping</li>
+              <li><code>samba-dcerpcd</code> trimmed to the essentials, so share browsing works on a 1.2 GHz CPU</li>
+              <li>One command to go back to the stock smbd</li>
+            </ul>
+          </div>
+        </div>
+        <div class="profile-terminal">
+          <div><span class="terminal-key">smb1_stock</span><span class="terminal-equals">=</span><span class="terminal-value">10,7 MB/s scrittura/write · 14,3 MB/s lettura/read</span></div>
+          <div><span class="terminal-key">smb3_unsigned</span><span class="terminal-equals">=</span><span class="terminal-value">9–10 MB/s scrittura/write · 12–17,6 MB/s lettura/read</span></div>
+          <div><span class="terminal-key">smb3_signed_cmac</span><span class="terminal-equals">=</span><span class="terminal-value">~2,3 MB/s (nessuna istruzione AES / no AES instructions)</span></div>
+          <div><span class="terminal-key">share_listing</span><span class="terminal-equals">=</span><span class="terminal-value">0,4 s con worker preavviati / with pre-warmed workers</span></div>
+          <div><span class="terminal-key">verified</span><span class="terminal-equals">=</span><span class="terminal-value">reboot, standby Auto Power, risveglio / wake-up</span></div>
+        </div>
+        <p class="project-note"><strong>Nota / Note:</strong> Windows 11 24H2 e macOS impongono la firma SMB, che su questo hardware è lenta: la guida spiega come toglierne l'obbligo lato client in una LAN di casa. / Windows 11 24H2 and macOS require SMB signing, which is slow on this hardware: the guide explains how to drop the requirement client-side on a home LAN.</p>
+      </article>
+
+      <article class="item">
+        <div class="project-head">
+          <span class="project-index">07</span>
+          <h2>Prima di provare / Before you try</h2>
+          <span class="repo-link">backup</span>
+        </div>
+        <div class="project-copy"><p><span class="language-label">Italiano</span> Serve l'accesso root (ACP Commander). Fai un backup di <code>/etc</code>, controlla che il RAID sia sano e tieni a portata di mano i comandi di rollback del README: ogni fix si toglie con pochi comandi.</p><p><span class="language-label">English</span> Root access (ACP Commander) is required. Back up <code>/etc</code>, make sure the RAID is healthy and keep the README rollback commands at hand: every fix can be removed with a few commands.</p></div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <span class="prompt" aria-hidden="true">$</span> BuffaloTricks è un progetto personale, scritto da Luke con ChatGPT e Claude. / BuffaloTricks is a personal project, written by Luke with ChatGPT and Claude.
+    </footer>
+  </div>
+</body>
+</html>
